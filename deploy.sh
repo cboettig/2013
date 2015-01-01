@@ -1,6 +1,9 @@
 #!/bin/bash
 if [ ! -d _gh-pages ]; then
 	git clone -b gh-pages . _gh-pages
+	cd _gh-pages && git remote rm origin && cd ..
+	git remote add origin git@github.com:cboettig/2013.git
+	git push -u origin gh-pages
 # Control will enter here if $DIRECTORY exists.
 else
 	cd _gh-pages && git pull origin gh-pages && cd ..
