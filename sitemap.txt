@@ -1,9 +1,9 @@
  
 http://www.carlboettiger.info/2013/R.xml  
-http://www.carlboettiger.info/2013/archive.html  
 http://www.carlboettiger.info/2013/atom.xml  
 http://www.carlboettiger.info/2013/blog.xml  
 http://www.carlboettiger.info/2013/categories.html  
+http://www.carlboettiger.info/2013/index.html  
 http://www.carlboettiger.info/2013/sitemap.txt  
 http://www.carlboettiger.info/2013/tags.html 
 
