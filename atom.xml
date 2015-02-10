@@ -4,7 +4,7 @@
  <title>Lab Notebook</title>
  <link href="/2013/atom.xml" rel="self"/>
  <link href="/"/>
- <updated>2015-01-02T05:53:06+00:00</updated>
+ <updated>2015-02-10T20:38:29+00:00</updated>
  <id>http://www.carlboettiger.info/2013</id>
  <author>
    <name>Carl Boettiger</name>
@@ -38,7 +38,7 @@
 &lt;p&gt;&lt;span class=&quot;math&quot;&gt;\[ B^2 (T-1) \left( \left(\theta - \frac{\sum_t A_t}{B(T-1)}\right)^2 + \frac{\sum A_t ^2 - (\sum A_t)^2}{B^2 (T-1)} \right) \]&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;Which lets us write &lt;span class=&quot;math&quot;&gt;\(P(\theta | X; \alpha, \sigma)\)&lt;/span&gt; as a normal distribution in &lt;span class=&quot;math&quot;&gt;\(\theta\)&lt;/span&gt; times some constant terms:&lt;/p&gt;
 &lt;p&gt;&lt;span class=&quot;math&quot;&gt;\[ P(\theta | X; \alpha, \sigma) =  \exp \left(\frac{-\sum A_t^2 + (\sum A_t)^2 }{V_{\tau}  }\right) \sqrt{\frac{1}{2\pi V_{\tau} }}^{T-1} \int d\theta\exp\left( -\frac{ \left(\theta -  \frac{\sum_t A_t}{B(T-1)} \right)^2 }{\tfrac{2V_{\tau}}{B^2 (T-1)}}\right) \]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;In which we recognize the integral as Gaussian with mean &lt;span class=&quot;math&quot;&gt;\(\mu = \frac{\sum_t A_t}{B(T-1)} \)&lt;/span&gt; and variance &lt;span class=&quot;math&quot;&gt;\(\nu =  V_{\tau}/(B^2(T-1))\)&lt;/span&gt;, and thus can replace the integral with &lt;span class=&quot;math&quot;&gt;\(\sqrt{2 \pi \nu} = \sqrt{\frac{2 \pi V_{\tau} }{B^2(T-1)}}\)&lt;/span&gt;,&lt;/p&gt;
+&lt;p&gt;In which we recognize the integral as Gaussian with mean $=  $ and variance &lt;span class=&quot;math&quot;&gt;\(\nu = V_{\tau}/(B^2(T-1))\)&lt;/span&gt;, and thus can replace the integral with &lt;span class=&quot;math&quot;&gt;\(\sqrt{2 \pi \nu} = \sqrt{\frac{2 \pi V_{\tau} }{B^2(T-1)}}\)&lt;/span&gt;,&lt;/p&gt;
 &lt;p&gt;&lt;span class=&quot;math&quot;&gt;\[ P(\theta | X; \alpha, \sigma) =  \exp \left(\frac{-\sum A_t^2 + (\sum A_t)^2 }{V_{\tau}  }\right) \sqrt{\frac{1}{2\pi V_{\tau} }}^{T-1}  \sqrt{\frac{2 \pi V_{\tau} }{B^2(T-1)}}\]&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;Collecting common terms in &lt;span class=&quot;math&quot;&gt;\(V_t\)&lt;/span&gt;,&lt;/p&gt;
 &lt;p&gt;&lt;span class=&quot;math&quot;&gt;\[ P(\theta | X; \alpha, \sigma) =  \exp \left(\frac{f(A_t)}{V_{\tau}}\right) \sqrt{\frac{1}{2\pi}}^{T-1}  \sqrt{\frac{2 \pi  }{B^2(T-1)}} V_{\tau}^{\tfrac{1}{2}} V_{\tau}^{\tfrac{1-T}{2}}  \]&lt;/span&gt;&lt;/p&gt;
@@ -82,9 +82,7 @@ leaving us with
 $$\frac{1}{(T-1)\sqrt{2 \pi}^{T-2} } \frac{\tfrac{1}{2}^{T/2} \left( \sum M_t^2 - \frac{ \left( \sum M_t \right)^2}{T - 1}\right)^{T/2}}{\Gamma(T/2)} $$
 
 
---&gt; 
-
-
+--&gt;
 </content>
  </entry>
  
@@ -229,8 +227,7 @@ meta &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quo
 &lt;p&gt;His list of problems to be tackled by this Data Science Initiative includes some particularly catching references to issues that have raised themselves on Dynamic Ecology before:&lt;/p&gt;
 &lt;!--
 &gt; - An incentive structure that favors individualism, hyper-specialization and &quot;novelty&quot; to a toxic extreme
---&gt; 
-
+--&gt;
 &lt;blockquote&gt;
 &lt;ul&gt;
 &lt;li&gt;people grab methods like shirts from a rack, to see if they work with the pants they are wearing that day&lt;/li&gt;
@@ -254,7 +251,6 @@ meta &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quo
 Data scales in a way that publications do not, even (or rather, especially) within a particular sub-domain.  Given a single paper on a topic, it is much easier to read the conclusion than replicate it from the data.  Given 1000 papers on the topic vs having the underlying data in a standardized form, it becomes easier to replicate the analyses. Surely that would just lead to nonsense, given the idiosyncrasies of each different experiment that were never meant to be compared in that way?  Surely only by carefully reading not only each paper, but each supplement, can we really understand what was done well enough to replicate or re-analyze it?  Yet we cite papers as if they have demonstrated something in far more generality than all that.   
 
 --&gt;
-
 &lt;h5 id=&quot;the-problem-part-2-junk-software&quot;&gt;the problem, part 2: junk software&lt;/h5&gt;
 &lt;p&gt;As Perez is careful to point out, those implementing and publishing methods aren’t helping either. Unreliable, inextensible and opaque computational implementations act both as barriers to adoption and validation. Trouble with scientific software has been well recognized by the literature (e.g. &lt;a href=&quot;http://doi.org/10.1038/467775a&quot;&gt;Merali (2010), &lt;em&gt;Nature&lt;/em&gt;&lt;/a&gt;, &lt;a href=&quot;http://doi.org/10.1038/nature10836&quot;&gt;Inces et al. (2012), &lt;em&gt;Nature&lt;/em&gt;&lt;/a&gt;), the news (&lt;a href=&quot;http://www.timeshighereducation.co.uk/news/save-your-work-give-software-engineers-a-career-track/2006431.article&quot;&gt;Times Higher Education&lt;/a&gt;) and funding agencies (&lt;a href=&quot;http://www.nsf.gov/pubs/2013/nsf13525/nsf13525.htm&quot;&gt;National Science Foundation&lt;/a&gt;). While it is difficult to assess the frequency of software bugs that may really alter the results (though see Inces et al.), designs that will make software challenging or impossible to maintain, scale to larger tasks or extend as methods evolve are more readily apparent. Cultural challenges around software run as deep as they do around data. When Mozilla’s Science Lab &lt;a href=&quot;http://doi.org/10.1038/501472a&quot;&gt;undertook a review of code&lt;/a&gt; associated with scientific publications, they took some criticism from other &lt;a href=&quot;http://simplystatistics.org/2013/09/26/how-could-code-review-discourage-code-disclosure-reviewers-with-motivation/&quot;&gt;advocates&lt;/a&gt; of publishing code. I encountered this first hand in replies from authors, editors and reviewers on my own blog post &lt;a href=&quot;http://carlboettiger.info/2013/06/13/what-I-look-for-in-software-papers.html&quot;&gt;suggesting we raise the bar&lt;/a&gt; on the review of methodological implementations. Despite disagreement about where that bar should be, I think we all felt the community could benefit from clearer guidance or consensus on how to review papers in which the software implementation plays an essential part and contribution.&lt;/p&gt;
 &lt;h5 id=&quot;the-solution-part-2-software-publication&quot;&gt;the solution, part 2: software publication?&lt;/h5&gt;
@@ -262,8 +258,6 @@ Data scales in a way that publications do not, even (or rather, especially) with
 &lt;h6 id=&quot;or-not&quot;&gt;Or not?&lt;/h6&gt;
 &lt;p&gt;While widespread recognition of its importance will no doubt help bring us faster software, fewer bugs and more user-friendly interfaces, it may do more harm than good. Promotion of software as a product can lead to empire-building, for which ESRI’s ArcGIS might be a poster child. The scientific concepts become increasingly opaque, while training in a conceptually rich academic field gives way to more mindless training in the user interface of a single giant software tool. I believe that good scientific software should be modular – small code bases that can be easily understood, inter-operable, and perform a single task well (the Unix model). This lets us build more robust computational infrastructure tailored to the problem at hand, just as individual Lego bricks may be assembled and reassembled. Unfortunately, I do not see how recognition for software products would promote small modules over vast software platforms, or interoperability with other software instead of an exclusive walled garden.&lt;/p&gt;
 &lt;!-- include image of lego brick tower?--&gt;
-
-
 &lt;h4 id=&quot;so-change-incentives-how&quot;&gt;So, change incentives &lt;em&gt;how&lt;/em&gt;?&lt;/h4&gt;
 &lt;p&gt;If this provides some argument as to why one might want to change incentives around data and software publication, I have said nothing to suggest how. After all, as ecologists we’re trained to reflect on the impact a policy would have, not advocate for what should be done about it. If the decision-makers agree about the effects of the given incentives, then choosing what to reward should be easier.&lt;/p&gt;
 &lt;!--
@@ -272,8 +266,6 @@ Data scales in a way that publications do not, even (or rather, especially) with
 In raising these questions, Perez brings the role of a Data Science Institute down from the clouds of superficial pattern-finding in astronomically large data sets that bear no resemblance to what most of us work on, and places front and center the challenges of designing, selecting, implementing and interpreting the richer statistical analyses we face each day. In the process of bolstering the data and methodology upon which we base research today, we may open up the doors to better, faster, and bigger science tomorrow.  
 
 --&gt;
-
-
 &lt;section class=&quot;footnotes&quot;&gt;
 &lt;hr /&gt;
 &lt;ol&gt;
@@ -371,8 +363,6 @@ Open data is often represented as benefiting the parasites (through &quot;free&q
 Phylogenetic data is perhaps the most pervasive example across ecological and evolutionary work where people now use sequences or phylogeny data they did not collect themselves.  And yes, the literature is rife with examples where this data has been misapplied - such as branch lengths being misinterpreted or uncertainty in branch lengths ignored.  Would fewer errors be made if we had no genbank and everyone had to collect all their own sequence data?  Yes, because most of these studies would become infeasible anyhow.  Creating a time-calibrated phylogeny from sequence data and fossils you collected all yourself might give you a greater appreciation for the uncertainty, but only to the extent that you learn the theoretical statistical underpinnings of the inference along the way.  
 
 --&gt;
-
-
 </content>
  </entry>
  
@@ -448,483 +438,84 @@ Phylogenetic data is perhaps the most pervasive example across ecological and ev
 &lt;img src=&quot;http://farm8.staticflickr.com/7371/10693106325_9cb0c2c8bb_o.png&quot; alt=&quot;plot of chunk unnamed-chunk-1&quot; /&gt;&lt;figcaption&gt;plot of chunk unnamed-chunk-1&lt;/figcaption&gt;
 &lt;/figure&gt;
 &lt;TABLE border=1&gt;
-&lt;TR&gt; &lt;TH&gt;  &lt;/TH&gt; &lt;TH&gt; 
+&lt;TR&gt;
+&lt;TH&gt;
+&lt;/TH&gt;
+&lt;TH&gt;
 penalty_fn
-&lt;/TH&gt; &lt;TH&gt; 
+&lt;/TH&gt;
+&lt;TH&gt;
 ignore_cost
-&lt;/TH&gt; &lt;TH&gt; 
+&lt;/TH&gt;
+&lt;TH&gt;
 ignore_fraction
-&lt;/TH&gt; &lt;TH&gt; 
+&lt;/TH&gt;
+&lt;TH&gt;
 assume_cost
-&lt;/TH&gt; &lt;TH&gt; 
+&lt;/TH&gt;
+&lt;TH&gt;
 assume_fraction
-&lt;/TH&gt; &lt;TH&gt; 
+&lt;/TH&gt;
+&lt;TH&gt;
 sigma_g
-&lt;/TH&gt; &lt;TH&gt; 
+&lt;/TH&gt;
+&lt;TH&gt;
 reduction
-&lt;/TH&gt;  &lt;/TR&gt;
-  &lt;TR&gt; &lt;TD align=&quot;right&quot;&gt; 
+&lt;/TH&gt;
+&lt;/TR&gt;
+&lt;TR&gt;
+&lt;TD align=&quot;right&quot;&gt;
 1
-&lt;/TD&gt; &lt;TD&gt; 
+&lt;/TD&gt;
+&lt;TD&gt;
 L1
-&lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 
+&lt;/TD&gt;
+&lt;TD align=&quot;right&quot;&gt;
 14536.09
-&lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 
+&lt;/TD&gt;
+&lt;TD align=&quot;right&quot;&gt;
 1.00
-&lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 
+&lt;/TD&gt;
+&lt;TD align=&quot;right&quot;&gt;
 16857.61
-&lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 
+&lt;/TD&gt;
+&lt;TD align=&quot;right&quot;&gt;
 1.00
-&lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 
+&lt;/TD&gt;
+&lt;TD align=&quot;right&quot;&gt;
 0.05
-&lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 
+&lt;/TD&gt;
+&lt;TD align=&quot;right&quot;&gt;
 0.10
-&lt;/TD&gt; &lt;/TR&gt;
-    &lt;TR&gt; &lt;TD align=&quot;right&quot;&gt; 
-2
-&lt;/TD&gt; &lt;TD&gt; 
-L2
-&lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 
-11020.10
-&lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 
-0.76
-&lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 
-15538.44
-&lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 
-0.92
-&lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 
-0.05
-&lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 
-0.10
-&lt;/TD&gt; &lt;/TR&gt;
-      &lt;TR&gt; &lt;TD align=&quot;right&quot;&gt; 
-3
-&lt;/TD&gt; &lt;TD&gt; 
-fixed
-&lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 
-13584.97
-&lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 
-0.92
-&lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 
-17582.78
-&lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 
-1.05
-&lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 
-0.05
-&lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 
-0.10
-&lt;/TD&gt; &lt;/TR&gt;
-        &lt;TR&gt; &lt;TD align=&quot;right&quot;&gt; 
-4
-&lt;/TD&gt; &lt;TD&gt; 
-L1
-&lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 
-9273.66
-&lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 
-1.09
-&lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 
-17561.81
-&lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 
-1.04
-&lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 
-0.05
-&lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 
-0.20
-&lt;/TD&gt; &lt;/TR&gt;
-          &lt;TR&gt; &lt;TD align=&quot;right&quot;&gt; 
-5
-&lt;/TD&gt; &lt;TD&gt; 
-L2
-&lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 
-11020.10
-&lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 
-0.76
-&lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 
-15538.44
-&lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 
-0.92
-&lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 
-0.05
-&lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 
-0.20
-&lt;/TD&gt; &lt;/TR&gt;
-            &lt;TR&gt; &lt;TD align=&quot;right&quot;&gt; 
-6
-&lt;/TD&gt; &lt;TD&gt; 
-fixed
-&lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 
-8332.45
-&lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 
-0.84
-&lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 
-17401.82
-&lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 
-1.03
-&lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 
-0.05
-&lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 
-0.20
-&lt;/TD&gt; &lt;/TR&gt;
-              &lt;TR&gt; &lt;TD align=&quot;right&quot;&gt; 
-7
-&lt;/TD&gt; &lt;TD&gt; 
-L1
-&lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 
--641.78
-&lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 
-0.21
-&lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 
-15451.25
-&lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 
-0.92
-&lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 
-0.05
-&lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 
-0.30
-&lt;/TD&gt; &lt;/TR&gt;
-                &lt;TR&gt; &lt;TD align=&quot;right&quot;&gt; 
-8
-&lt;/TD&gt; &lt;TD&gt; 
-L2
-&lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 
--272586.11
-&lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 
--24.90
-&lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 
-11567.12
-&lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 
-0.69
-&lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 
-0.05
-&lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 
-0.30
-&lt;/TD&gt; &lt;/TR&gt;
-                  &lt;TR&gt; &lt;TD align=&quot;right&quot;&gt; 
-9
-&lt;/TD&gt; &lt;TD&gt; 
-fixed
-&lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 
--1213.01
-&lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 
--0.46
-&lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 
-15519.95
-&lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 
-0.92
-&lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 
-0.05
-&lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 
-0.30
-&lt;/TD&gt; &lt;/TR&gt;
-                    &lt;TR&gt; &lt;TD align=&quot;right&quot;&gt; 
-10
-&lt;/TD&gt; &lt;TD&gt; 
-L1
-&lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 
-18281.97
-&lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 
-1.01
-&lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 
-20973.56
-&lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 
-0.99
-&lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 
-0.20
-&lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 
-0.10
-&lt;/TD&gt; &lt;/TR&gt;
-                      &lt;TR&gt; &lt;TD align=&quot;right&quot;&gt; 
-11
-&lt;/TD&gt; &lt;TD&gt; 
-L2
-&lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 
-12462.51
-&lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 
-0.72
-&lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 
-19392.85
-&lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 
-0.91
-&lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 
-0.20
-&lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 
-0.10
-&lt;/TD&gt; &lt;/TR&gt;
-                        &lt;TR&gt; &lt;TD align=&quot;right&quot;&gt; 
-12
-&lt;/TD&gt; &lt;TD&gt; 
-fixed
-&lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 
-16691.94
-&lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 
-1.03
-&lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 
-20143.80
-&lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 
-0.95
-&lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 
-0.20
-&lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 
-0.10
-&lt;/TD&gt; &lt;/TR&gt;
-                          &lt;TR&gt; &lt;TD align=&quot;right&quot;&gt; 
-13
-&lt;/TD&gt; &lt;TD&gt; 
-L1
-&lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 
-12788.95
-&lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 
-0.96
-&lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 
-20663.21
-&lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 
-0.97
-&lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 
-0.20
-&lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 
-0.20
-&lt;/TD&gt; &lt;/TR&gt;
-                            &lt;TR&gt; &lt;TD align=&quot;right&quot;&gt; 
-14
-&lt;/TD&gt; &lt;TD&gt; 
-L2
-&lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 
-12462.51
-&lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 
-0.72
-&lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 
-19392.85
-&lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 
-0.91
-&lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 
-0.20
-&lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 
-0.20
-&lt;/TD&gt; &lt;/TR&gt;
-                              &lt;TR&gt; &lt;TD align=&quot;right&quot;&gt; 
-15
-&lt;/TD&gt; &lt;TD&gt; 
-fixed
-&lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 
-12399.01
-&lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 
-0.88
-&lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 
-21289.21
-&lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 
-1.00
-&lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 
-0.20
-&lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 
-0.20
-&lt;/TD&gt; &lt;/TR&gt;
-                                &lt;TR&gt; &lt;TD align=&quot;right&quot;&gt; 
-16
-&lt;/TD&gt; &lt;TD&gt; 
-L1
-&lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 
-9099.48
-&lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 
-0.73
-&lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 
-19999.07
-&lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 
-0.94
-&lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 
-0.20
-&lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 
-0.30
-&lt;/TD&gt; &lt;/TR&gt;
-                                  &lt;TR&gt; &lt;TD align=&quot;right&quot;&gt; 
-17
-&lt;/TD&gt; &lt;TD&gt; 
-L2
-&lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 
--6337.76
-&lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 
--0.39
-&lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 
-17765.33
-&lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 
-0.83
-&lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 
-0.20
-&lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 
-0.30
-&lt;/TD&gt; &lt;/TR&gt;
-                                    &lt;TR&gt; &lt;TD align=&quot;right&quot;&gt; 
-18
-&lt;/TD&gt; &lt;TD&gt; 
-fixed
-&lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 
-7399.01
-&lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 
-0.62
-&lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 
-21969.84
-&lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 
-1.03
-&lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 
-0.20
-&lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 
-0.30
-&lt;/TD&gt; &lt;/TR&gt;
-                                      &lt;TR&gt; &lt;TD align=&quot;right&quot;&gt; 
-19
-&lt;/TD&gt; &lt;TD&gt; 
-L1
-&lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 
-30227.43
-&lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 
-1.07
-&lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 
-31377.07
-&lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 
-0.94
-&lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 
-0.50
-&lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 
-0.10
-&lt;/TD&gt; &lt;/TR&gt;
-                                        &lt;TR&gt; &lt;TD align=&quot;right&quot;&gt; 
-20
-&lt;/TD&gt; &lt;TD&gt; 
-L2
-&lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 
-33472.18
-&lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 
-1.00
-&lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 
-33472.18
-&lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 
-1.00
-&lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 
-0.50
-&lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 
-0.10
-&lt;/TD&gt; &lt;/TR&gt;
-                                          &lt;TR&gt; &lt;TD align=&quot;right&quot;&gt; 
-21
-&lt;/TD&gt; &lt;TD&gt; 
-fixed
-&lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 
-28926.73
-&lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 
-1.09
-&lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 
-30500.85
-&lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 
-0.91
-&lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 
-0.50
-&lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 
-0.10
-&lt;/TD&gt; &lt;/TR&gt;
-                                            &lt;TR&gt; &lt;TD align=&quot;right&quot;&gt; 
-22
-&lt;/TD&gt; &lt;TD&gt; 
-L1
-&lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 
-24157.93
-&lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 
-1.10
-&lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 
-31767.92
-&lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 
-0.95
-&lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 
-0.50
-&lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 
-0.20
-&lt;/TD&gt; &lt;/TR&gt;
-                                              &lt;TR&gt; &lt;TD align=&quot;right&quot;&gt; 
-23
-&lt;/TD&gt; &lt;TD&gt; 
-L2
-&lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 
-19091.31
-&lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 
-0.93
-&lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 
-29225.46
-&lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 
-0.87
-&lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 
-0.50
-&lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 
-0.20
-&lt;/TD&gt; &lt;/TR&gt;
-                                                &lt;TR&gt; &lt;TD align=&quot;right&quot;&gt; 
-24
-&lt;/TD&gt; &lt;TD&gt; 
-fixed
-&lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 
-23573.19
-&lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 
-1.02
-&lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 
-30069.80
-&lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 
-0.90
-&lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 
-0.50
-&lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 
-0.20
-&lt;/TD&gt; &lt;/TR&gt;
-                                                  &lt;TR&gt; &lt;TD align=&quot;right&quot;&gt; 
-25
-&lt;/TD&gt; &lt;TD&gt; 
-L1
-&lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 
-21086.12
-&lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 
-1.12
-&lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 
-32035.93
-&lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 
-0.96
-&lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 
-0.50
-&lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 
-0.30
-&lt;/TD&gt; &lt;/TR&gt;
-                                                    &lt;TR&gt; &lt;TD align=&quot;right&quot;&gt; 
-26
-&lt;/TD&gt; &lt;TD&gt; 
-L2
-&lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 
-19091.31
-&lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 
-0.93
-&lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 
-29225.46
-&lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 
-0.87
-&lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 
-0.50
-&lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 
-0.30
-&lt;/TD&gt; &lt;/TR&gt;
-                                                      &lt;TR&gt; &lt;TD align=&quot;right&quot;&gt; 
-27
-&lt;/TD&gt; &lt;TD&gt; 
-fixed
-&lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 
-17209.56
-&lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 
-0.85
-&lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 
-32946.24
-&lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 
-0.98
-&lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 
-0.50
-&lt;/TD&gt; &lt;TD align=&quot;right&quot;&gt; 
-0.30
-&lt;/TD&gt; &lt;/TR&gt;
-                                                         &lt;/TABLE&gt;
-
-
+&lt;/TD&gt;
+&lt;/TR&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;TR&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 2 &amp;lt;/TD&amp;gt; &amp;lt;TD&amp;gt; L2 &amp;lt;/TD&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 11020.10 &amp;lt;/TD&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 0.76 &amp;lt;/TD&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 15538.44 &amp;lt;/TD&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 0.92 &amp;lt;/TD&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 0.05 &amp;lt;/TD&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 0.10 &amp;lt;/TD&amp;gt; &amp;lt;/TR&amp;gt;
+  &amp;lt;TR&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 3 &amp;lt;/TD&amp;gt; &amp;lt;TD&amp;gt; fixed &amp;lt;/TD&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 13584.97 &amp;lt;/TD&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 0.92 &amp;lt;/TD&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 17582.78 &amp;lt;/TD&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 1.05 &amp;lt;/TD&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 0.05 &amp;lt;/TD&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 0.10 &amp;lt;/TD&amp;gt; &amp;lt;/TR&amp;gt;
+    &amp;lt;TR&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 4 &amp;lt;/TD&amp;gt; &amp;lt;TD&amp;gt; L1 &amp;lt;/TD&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 9273.66 &amp;lt;/TD&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 1.09 &amp;lt;/TD&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 17561.81 &amp;lt;/TD&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 1.04 &amp;lt;/TD&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 0.05 &amp;lt;/TD&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 0.20 &amp;lt;/TD&amp;gt; &amp;lt;/TR&amp;gt;
+      &amp;lt;TR&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 5 &amp;lt;/TD&amp;gt; &amp;lt;TD&amp;gt; L2 &amp;lt;/TD&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 11020.10 &amp;lt;/TD&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 0.76 &amp;lt;/TD&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 15538.44 &amp;lt;/TD&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 0.92 &amp;lt;/TD&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 0.05 &amp;lt;/TD&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 0.20 &amp;lt;/TD&amp;gt; &amp;lt;/TR&amp;gt;
+        &amp;lt;TR&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 6 &amp;lt;/TD&amp;gt; &amp;lt;TD&amp;gt; fixed &amp;lt;/TD&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 8332.45 &amp;lt;/TD&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 0.84 &amp;lt;/TD&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 17401.82 &amp;lt;/TD&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 1.03 &amp;lt;/TD&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 0.05 &amp;lt;/TD&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 0.20 &amp;lt;/TD&amp;gt; &amp;lt;/TR&amp;gt;
+          &amp;lt;TR&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 7 &amp;lt;/TD&amp;gt; &amp;lt;TD&amp;gt; L1 &amp;lt;/TD&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; -641.78 &amp;lt;/TD&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 0.21 &amp;lt;/TD&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 15451.25 &amp;lt;/TD&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 0.92 &amp;lt;/TD&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 0.05 &amp;lt;/TD&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 0.30 &amp;lt;/TD&amp;gt; &amp;lt;/TR&amp;gt;
+            &amp;lt;TR&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 8 &amp;lt;/TD&amp;gt; &amp;lt;TD&amp;gt; L2 &amp;lt;/TD&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; -272586.11 &amp;lt;/TD&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; -24.90 &amp;lt;/TD&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 11567.12 &amp;lt;/TD&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 0.69 &amp;lt;/TD&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 0.05 &amp;lt;/TD&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 0.30 &amp;lt;/TD&amp;gt; &amp;lt;/TR&amp;gt;
+              &amp;lt;TR&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 9 &amp;lt;/TD&amp;gt; &amp;lt;TD&amp;gt; fixed &amp;lt;/TD&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; -1213.01 &amp;lt;/TD&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; -0.46 &amp;lt;/TD&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 15519.95 &amp;lt;/TD&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 0.92 &amp;lt;/TD&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 0.05 &amp;lt;/TD&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 0.30 &amp;lt;/TD&amp;gt; &amp;lt;/TR&amp;gt;
+                &amp;lt;TR&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 10 &amp;lt;/TD&amp;gt; &amp;lt;TD&amp;gt; L1 &amp;lt;/TD&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 18281.97 &amp;lt;/TD&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 1.01 &amp;lt;/TD&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 20973.56 &amp;lt;/TD&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 0.99 &amp;lt;/TD&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 0.20 &amp;lt;/TD&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 0.10 &amp;lt;/TD&amp;gt; &amp;lt;/TR&amp;gt;
+                  &amp;lt;TR&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 11 &amp;lt;/TD&amp;gt; &amp;lt;TD&amp;gt; L2 &amp;lt;/TD&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 12462.51 &amp;lt;/TD&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 0.72 &amp;lt;/TD&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 19392.85 &amp;lt;/TD&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 0.91 &amp;lt;/TD&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 0.20 &amp;lt;/TD&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 0.10 &amp;lt;/TD&amp;gt; &amp;lt;/TR&amp;gt;
+                    &amp;lt;TR&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 12 &amp;lt;/TD&amp;gt; &amp;lt;TD&amp;gt; fixed &amp;lt;/TD&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 16691.94 &amp;lt;/TD&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 1.03 &amp;lt;/TD&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 20143.80 &amp;lt;/TD&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 0.95 &amp;lt;/TD&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 0.20 &amp;lt;/TD&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 0.10 &amp;lt;/TD&amp;gt; &amp;lt;/TR&amp;gt;
+                      &amp;lt;TR&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 13 &amp;lt;/TD&amp;gt; &amp;lt;TD&amp;gt; L1 &amp;lt;/TD&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 12788.95 &amp;lt;/TD&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 0.96 &amp;lt;/TD&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 20663.21 &amp;lt;/TD&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 0.97 &amp;lt;/TD&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 0.20 &amp;lt;/TD&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 0.20 &amp;lt;/TD&amp;gt; &amp;lt;/TR&amp;gt;
+                        &amp;lt;TR&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 14 &amp;lt;/TD&amp;gt; &amp;lt;TD&amp;gt; L2 &amp;lt;/TD&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 12462.51 &amp;lt;/TD&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 0.72 &amp;lt;/TD&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 19392.85 &amp;lt;/TD&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 0.91 &amp;lt;/TD&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 0.20 &amp;lt;/TD&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 0.20 &amp;lt;/TD&amp;gt; &amp;lt;/TR&amp;gt;
+                          &amp;lt;TR&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 15 &amp;lt;/TD&amp;gt; &amp;lt;TD&amp;gt; fixed &amp;lt;/TD&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 12399.01 &amp;lt;/TD&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 0.88 &amp;lt;/TD&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 21289.21 &amp;lt;/TD&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 1.00 &amp;lt;/TD&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 0.20 &amp;lt;/TD&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 0.20 &amp;lt;/TD&amp;gt; &amp;lt;/TR&amp;gt;
+                            &amp;lt;TR&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 16 &amp;lt;/TD&amp;gt; &amp;lt;TD&amp;gt; L1 &amp;lt;/TD&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 9099.48 &amp;lt;/TD&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 0.73 &amp;lt;/TD&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 19999.07 &amp;lt;/TD&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 0.94 &amp;lt;/TD&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 0.20 &amp;lt;/TD&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 0.30 &amp;lt;/TD&amp;gt; &amp;lt;/TR&amp;gt;
+                              &amp;lt;TR&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 17 &amp;lt;/TD&amp;gt; &amp;lt;TD&amp;gt; L2 &amp;lt;/TD&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; -6337.76 &amp;lt;/TD&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; -0.39 &amp;lt;/TD&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 17765.33 &amp;lt;/TD&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 0.83 &amp;lt;/TD&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 0.20 &amp;lt;/TD&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 0.30 &amp;lt;/TD&amp;gt; &amp;lt;/TR&amp;gt;
+                                &amp;lt;TR&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 18 &amp;lt;/TD&amp;gt; &amp;lt;TD&amp;gt; fixed &amp;lt;/TD&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 7399.01 &amp;lt;/TD&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 0.62 &amp;lt;/TD&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 21969.84 &amp;lt;/TD&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 1.03 &amp;lt;/TD&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 0.20 &amp;lt;/TD&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 0.30 &amp;lt;/TD&amp;gt; &amp;lt;/TR&amp;gt;
+                                  &amp;lt;TR&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 19 &amp;lt;/TD&amp;gt; &amp;lt;TD&amp;gt; L1 &amp;lt;/TD&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 30227.43 &amp;lt;/TD&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 1.07 &amp;lt;/TD&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 31377.07 &amp;lt;/TD&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 0.94 &amp;lt;/TD&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 0.50 &amp;lt;/TD&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 0.10 &amp;lt;/TD&amp;gt; &amp;lt;/TR&amp;gt;
+                                    &amp;lt;TR&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 20 &amp;lt;/TD&amp;gt; &amp;lt;TD&amp;gt; L2 &amp;lt;/TD&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 33472.18 &amp;lt;/TD&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 1.00 &amp;lt;/TD&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 33472.18 &amp;lt;/TD&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 1.00 &amp;lt;/TD&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 0.50 &amp;lt;/TD&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 0.10 &amp;lt;/TD&amp;gt; &amp;lt;/TR&amp;gt;
+                                      &amp;lt;TR&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 21 &amp;lt;/TD&amp;gt; &amp;lt;TD&amp;gt; fixed &amp;lt;/TD&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 28926.73 &amp;lt;/TD&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 1.09 &amp;lt;/TD&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 30500.85 &amp;lt;/TD&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 0.91 &amp;lt;/TD&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 0.50 &amp;lt;/TD&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 0.10 &amp;lt;/TD&amp;gt; &amp;lt;/TR&amp;gt;
+                                        &amp;lt;TR&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 22 &amp;lt;/TD&amp;gt; &amp;lt;TD&amp;gt; L1 &amp;lt;/TD&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 24157.93 &amp;lt;/TD&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 1.10 &amp;lt;/TD&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 31767.92 &amp;lt;/TD&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 0.95 &amp;lt;/TD&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 0.50 &amp;lt;/TD&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 0.20 &amp;lt;/TD&amp;gt; &amp;lt;/TR&amp;gt;
+                                          &amp;lt;TR&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 23 &amp;lt;/TD&amp;gt; &amp;lt;TD&amp;gt; L2 &amp;lt;/TD&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 19091.31 &amp;lt;/TD&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 0.93 &amp;lt;/TD&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 29225.46 &amp;lt;/TD&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 0.87 &amp;lt;/TD&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 0.50 &amp;lt;/TD&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 0.20 &amp;lt;/TD&amp;gt; &amp;lt;/TR&amp;gt;
+                                            &amp;lt;TR&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 24 &amp;lt;/TD&amp;gt; &amp;lt;TD&amp;gt; fixed &amp;lt;/TD&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 23573.19 &amp;lt;/TD&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 1.02 &amp;lt;/TD&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 30069.80 &amp;lt;/TD&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 0.90 &amp;lt;/TD&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 0.50 &amp;lt;/TD&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 0.20 &amp;lt;/TD&amp;gt; &amp;lt;/TR&amp;gt;
+                                              &amp;lt;TR&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 25 &amp;lt;/TD&amp;gt; &amp;lt;TD&amp;gt; L1 &amp;lt;/TD&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 21086.12 &amp;lt;/TD&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 1.12 &amp;lt;/TD&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 32035.93 &amp;lt;/TD&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 0.96 &amp;lt;/TD&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 0.50 &amp;lt;/TD&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 0.30 &amp;lt;/TD&amp;gt; &amp;lt;/TR&amp;gt;
+                                                &amp;lt;TR&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 26 &amp;lt;/TD&amp;gt; &amp;lt;TD&amp;gt; L2 &amp;lt;/TD&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 19091.31 &amp;lt;/TD&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 0.93 &amp;lt;/TD&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 29225.46 &amp;lt;/TD&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 0.87 &amp;lt;/TD&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 0.50 &amp;lt;/TD&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 0.30 &amp;lt;/TD&amp;gt; &amp;lt;/TR&amp;gt;
+                                                  &amp;lt;TR&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 27 &amp;lt;/TD&amp;gt; &amp;lt;TD&amp;gt; fixed &amp;lt;/TD&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 17209.56 &amp;lt;/TD&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 0.85 &amp;lt;/TD&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 32946.24 &amp;lt;/TD&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 0.98 &amp;lt;/TD&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 0.50 &amp;lt;/TD&amp;gt; &amp;lt;TD align=&amp;quot;right&amp;quot;&amp;gt; 0.30 &amp;lt;/TD&amp;gt; &amp;lt;/TR&amp;gt;
+                                                     &amp;lt;/TABLE&amp;gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;hr /&gt;
 &lt;h2 id=&quot;ropensci-ecoinformatics&quot;&gt;rOpenSci / ecoinformatics&lt;/h2&gt;
 &lt;ul&gt;
@@ -1207,7 +798,7 @@ ex2 &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot
    <content type="html">&lt;h3 id=&quot;authenticating-via-dataone-api&quot;&gt;Authenticating via DataOne API&lt;/h3&gt;
 &lt;p&gt;Matt Jones provides a nice &lt;code&gt;dataone&lt;/code&gt; package to handle accessing and posting data to DataOne nodes such as the KNB from R. Uploading files through the API requires authentication, which in turn requires a certificate from CILogin. As this process proved a bit tricky to me, I add some documentation here. I am using a Ubuntu (13.04) system, so the procedure might differ slightly for other systems.&lt;/p&gt;
 &lt;ol type=&quot;1&quot;&gt;
-&lt;li&gt;&lt;p&gt;Go to &lt;a href=&quot;https://cilogon.org/?skin=DataONE&quot;&gt;https://cilogon.org/?skin=DataONE&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Go to &lt;a href=&quot;https://cilogon.org/?skin=DataONE&quot; class=&quot;uri&quot;&gt;https://cilogon.org/?skin=DataONE&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Select authentication credentials. I used Google as an OpenID provider.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;This asked me to download a file named &lt;code&gt;shibCILaunchGSCA.jnlp&lt;/code&gt;. This is a java webstart application and is suppsed to launch in the browser; a feature many operating systems apparently disabled due to security concerns. One could reconfigure the browser settings to execute this file type (using javaws), or simply download and run javaws manually in the command line:&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
@@ -1434,25 +1025,23 @@ Extended Version of the Birth-Death Models to
 &lt;p&gt;We need to get more code out there, not improve how it looks&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;(Erika provides a bit more context to Roger’s comments below).&lt;/p&gt;
-&lt;blockquote class=&quot;twitter-tweet&quot;&gt;&lt;p&gt;
+&lt;blockquote class=&quot;twitter-tweet&quot;&gt;
+&lt;p&gt;
 &lt;a href=&quot;https://twitter.com/ctitusbrown&quot;&gt;&lt;span class=&quot;citation&quot; data-cites=&quot;ctitusbrown&quot;&gt;@ctitusbrown&lt;/span&gt;&lt;/a&gt; &lt;a href=&quot;https://twitter.com/cboettig&quot;&gt;&lt;span class=&quot;citation&quot; data-cites=&quot;cboettig&quot;&gt;@cboettig&lt;/span&gt;&lt;/a&gt; &lt;a href=&quot;https://twitter.com/kaythaney&quot;&gt;&lt;span class=&quot;citation&quot; data-cites=&quot;kaythaney&quot;&gt;@kaythaney&lt;/span&gt;&lt;/a&gt; &lt;a href=&quot;https://twitter.com/nickbarnes&quot;&gt;&lt;span class=&quot;citation&quot; data-cites=&quot;nickbarnes&quot;&gt;@nickbarnes&lt;/span&gt;&lt;/a&gt; see whole &lt;a href=&quot;https://twitter.com/simplystats&quot;&gt;&lt;span class=&quot;citation&quot; data-cites=&quot;simplystats&quot;&gt;@simplystats&lt;/span&gt;&lt;/a&gt; quote on prof. code review discouraging sharing &lt;a href=&quot;http://t.co/pNQWT9Safz&quot;&gt;pic.twitter.com/pNQWT9Safz&lt;/a&gt;
 &lt;/p&gt;
 — Erika Check Hayden (&lt;span class=&quot;citation&quot; data-cites=&quot;Erika_Check&quot;&gt;@Erika_Check&lt;/span&gt;) &lt;a href=&quot;https://twitter.com/Erika_Check/statuses/382911015358181376&quot;&gt;September 25, 2013&lt;/a&gt;
 &lt;/blockquote&gt;
 &lt;script async src=&quot;//platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
-
 &lt;p&gt;The &lt;em&gt;Nature&lt;/em&gt; News piece thus nails a central tension in the community between promoting higher standards for code (A position exemplified in an earlier &lt;em&gt;Nature&lt;/em&gt; column titled &lt;a href=&quot;http://doi.org/10.1038/467775a&quot; title=&quot;Merali 2010, Nature&quot;&gt;“Computational Science … Error: Why scientific programming does not compute”&lt;/a&gt;, and more recently in &lt;em&gt;Science&lt;/em&gt; by &lt;a href=&quot;http://doi.org/10.1126/science.1231535&quot; title=&quot;Joppa et al. 2013, &amp;#39;Troubling Trends in Scientific Software Use&amp;#39;&quot;&gt;Joppa &lt;em&gt;et al.&lt;/em&gt; 2013&lt;/a&gt;, which explicitly calls for peer review of scientific software) vs promoting more widespread sharing of software (as exemplified by Nick Barnes piece in the same issue, &lt;a href=&quot;http://doi.org/10.1038/467753a&quot; title=&quot;Barnes 2010, Nature&quot;&gt;“Publish your computer code: it is good enough”&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;The arguments made in each of the perspectives are excellent, and should be required reading for anyone interested in the subject. In addition to the shorter comment by Barnes, I also recommend the more recent &lt;em&gt;Nature&lt;/em&gt; perspective, &lt;a href=&quot;http://doi.org/10.1038/nature10836&quot; title=&quot;Ince et al. 2012, Nature&quot;&gt;The Case for Open Computer Programs&lt;/a&gt;, which lays out the argument and modest practical recommendations (that have largely been ignored as far as I can tell) just brilliantly. In particular, I think they nail the issue of why describing the algorithm or providing pseudo-code is not a satisfactory description of the method.&lt;/p&gt;
 &lt;p&gt;However, I also think the tension between review and sharing is somewhat artificial. While each of these positions emphasizes the need to share source-code, the call for code review by Merali, Joppa et al (or in my own blog post mentioned earlier), focus on &lt;em&gt;scientific software&lt;/em&gt; aimed at reuse by others. The concerns voiced in Roger Peng’s comments and echoed by Nick Barnes focus on another class of code entirely – code associated with a particular research publication that would primarily serve only to document and support those results, rather than be readily adapted to other uses.&lt;/p&gt;
-&lt;blockquote class=&quot;twitter-tweet&quot;&gt;&lt;p&gt;
+&lt;blockquote class=&quot;twitter-tweet&quot;&gt;
+&lt;p&gt;
 &lt;a href=&quot;https://twitter.com/cboettig&quot;&gt;&lt;span class=&quot;citation&quot; data-cites=&quot;cboettig&quot;&gt;@cboettig&lt;/span&gt;&lt;/a&gt; &lt;a href=&quot;https://twitter.com/ctitusbrown&quot;&gt;&lt;span class=&quot;citation&quot; data-cites=&quot;ctitusbrown&quot;&gt;@ctitusbrown&lt;/span&gt;&lt;/a&gt; &lt;a href=&quot;https://twitter.com/kaythaney&quot;&gt;&lt;span class=&quot;citation&quot; data-cites=&quot;kaythaney&quot;&gt;@kaythaney&lt;/span&gt;&lt;/a&gt; but far more important to get code out than to get it “right”, IYSWIM.
 &lt;/p&gt;
 — Nick Barnes (&lt;span class=&quot;citation&quot; data-cites=&quot;nickbarnes&quot;&gt;@nickbarnes&lt;/span&gt;) &lt;a href=&quot;https://twitter.com/nickbarnes/statuses/382746748135174144&quot;&gt;September 25, 2013&lt;/a&gt;
 &lt;/blockquote&gt;
 &lt;script async src=&quot;//platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
-
-
-
 &lt;h3 id=&quot;classes-of-code-snippets-vs-software&quot;&gt;Classes of Code: Snippets vs Software&lt;/h3&gt;
 &lt;p&gt;For me, the crux of these concerns lies in the difference between “software papers”&lt;a href=&quot;#fn1&quot; class=&quot;footnoteRef&quot; id=&quot;fnref1&quot;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt; and papers which merely use code in some element of the methodology. The Mozilla study focused exclusively on code appearing in the full-text of publications in PLoS Computational Biology. Though I am pleased to see the Science Lab tackle the issue of software review and bring the expertise of their professional software developers to bear on scientific code, this is perhaps not the kind of code I would have chosen to focus on (something I shared with the team early on in seeing the announcement).&lt;/p&gt;
 &lt;p&gt;Without knowing which papers are included it is of course difficult to say to much. But knowing that the code appears in the full text of the papers themselves, we can assume that it is not a complete software package intended for reuse by other researchers. Using code within the body of a manuscript implies the intent to communicate methodology more concisely and precisely than might be done in prose; in much the same manner that we use equations in place of prose. This is an important development in scientific communication, but is also rather distinct from the use of code in other contexts, in which the code itself is meant to be read primarily by machines. It is code that is already intended to help &lt;em&gt;explain&lt;/em&gt;.&lt;/p&gt;
@@ -1464,44 +1053,42 @@ Extended Version of the Birth-Death Models to
 &lt;blockquote&gt;
 &lt;p&gt;“We need to get more code out there, not improve how it looks.”&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;blockquote class=&quot;twitter-tweet&quot;&gt;&lt;p&gt;
+&lt;blockquote class=&quot;twitter-tweet&quot;&gt;
+&lt;p&gt;
 &lt;a href=&quot;https://twitter.com/kaythaney&quot;&gt;&lt;span class=&quot;citation&quot; data-cites=&quot;kaythaney&quot;&gt;@kaythaney&lt;/span&gt;&lt;/a&gt; &lt;a href=&quot;https://twitter.com/ctitusbrown&quot;&gt;&lt;span class=&quot;citation&quot; data-cites=&quot;ctitusbrown&quot;&gt;@ctitusbrown&lt;/span&gt;&lt;/a&gt; yup, ‘pretty’ is dismissive terminology, though possibly short-hand for ‘human-readable’ not just ‘machine-readable’
 &lt;/p&gt;
 — Carl Boettiger (&lt;span class=&quot;citation&quot; data-cites=&quot;cboettig&quot;&gt;@cboettig&lt;/span&gt;) &lt;a href=&quot;https://twitter.com/cboettig/statuses/382905327013728256&quot;&gt;September 25, 2013&lt;/a&gt;
 &lt;/blockquote&gt;
 &lt;script async src=&quot;//platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
-
 &lt;p&gt;Most modern languages include &lt;a href=&quot;http://en.wikipedia.org/wiki/Syntactic_sugar&quot;&gt;syntactic sugar&lt;/a&gt;: ways of expressing commands that are more easily interpretable to human readers. For instance, in C, &lt;code&gt;a[i]&lt;/code&gt; is syntactic sugar for &lt;code&gt;*(a+i)&lt;/code&gt;. Higher-level languages are in some ways all sugar around existing lower-level libraries.&lt;a href=&quot;#fn2&quot; class=&quot;footnoteRef&quot; id=&quot;fnref2&quot;&gt;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt; Like good mathematical notation or good prose, this is not just about being ‘pretty’, but being more effective in communicating with humans. Certainly this is something we can improve upon as researchers, but it is perhaps not the best starting point.&lt;/p&gt;
 &lt;h3 id=&quot;share-first-fix-later&quot;&gt;Share first, fix later&lt;/h3&gt;
 &lt;p&gt;If code review should apply to all levels of code or be reserved for scientific software may still be an open question. What we should be able to agree on is in the publishing of code in the first place:&lt;/p&gt;
-&lt;blockquote class=&quot;twitter-tweet&quot;&gt;&lt;p&gt;
+&lt;blockquote class=&quot;twitter-tweet&quot;&gt;
+&lt;p&gt;
 &lt;a href=&quot;https://twitter.com/cboettig&quot;&gt;&lt;span class=&quot;citation&quot; data-cites=&quot;cboettig&quot;&gt;@cboettig&lt;/span&gt;&lt;/a&gt; &lt;a href=&quot;https://twitter.com/kaythaney&quot;&gt;&lt;span class=&quot;citation&quot; data-cites=&quot;kaythaney&quot;&gt;@kaythaney&lt;/span&gt;&lt;/a&gt; &lt;a href=&quot;https://twitter.com/nickbarnes&quot;&gt;&lt;span class=&quot;citation&quot; data-cites=&quot;nickbarnes&quot;&gt;@nickbarnes&lt;/span&gt;&lt;/a&gt; I think code sharing should be mandatory &lt;em&gt;shrug&lt;/em&gt;. It&#39;s part of the methods. I reject papers w/o it.
 &lt;/p&gt;
 — Titus Brown (&lt;span class=&quot;citation&quot; data-cites=&quot;ctitusbrown&quot;&gt;@ctitusbrown&lt;/span&gt;) &lt;a href=&quot;https://twitter.com/ctitusbrown/statuses/382903924253929472&quot;&gt;September 25, 2013&lt;/a&gt;
 &lt;/blockquote&gt;
 &lt;script async src=&quot;//platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
-
-
 &lt;p&gt;It continues to surprise me how few journals require code deposition. &lt;em&gt;Science&lt;/em&gt; explicitly &lt;a href=&quot;http://doi.org/10.1126/science.1203354&quot;&gt;adopted a new policy in 2011&lt;/a&gt; stating&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;em&gt;Science&lt;/em&gt; is extending our data access requirement listed above to include computer codes involved in the creation or analysis of data&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;which asks that the data be placed in a appropriate permanent repository or otherwise placed in the supplementary materials (see &lt;a href=&quot;http://www.sciencemag.org/site/feature/contribinfo/prep/gen_info.xhtml#dataavail&quot;&gt;information for authors&lt;/a&gt;).&lt;/p&gt;
 &lt;p&gt;Yet I have not seen code provided for any analysis I have read in Science since 2011. Either we have a very different understanding of what it means to use computer codes in the analysis of data or &lt;em&gt;Science&lt;/em&gt; grossly neglects its own policy.&lt;a href=&quot;#fn3&quot; class=&quot;footnoteRef&quot; id=&quot;fnref3&quot;&gt;&lt;sup&gt;3&lt;/sup&gt;&lt;/a&gt; Not to pick on them of course, few other journals have explicitly adopted such a policy.&lt;/p&gt;
-&lt;blockquote class=&quot;twitter-tweet&quot;&gt;&lt;p&gt;
+&lt;blockquote class=&quot;twitter-tweet&quot;&gt;
+&lt;p&gt;
 .&lt;a href=&quot;https://twitter.com/cboettig&quot;&gt;&lt;span class=&quot;citation&quot; data-cites=&quot;cboettig&quot;&gt;@cboettig&lt;/span&gt;&lt;/a&gt; &lt;a href=&quot;https://twitter.com/kaythaney&quot;&gt;&lt;span class=&quot;citation&quot; data-cites=&quot;kaythaney&quot;&gt;@kaythaney&lt;/span&gt;&lt;/a&gt; &lt;a href=&quot;https://twitter.com/nickbarnes&quot;&gt;&lt;span class=&quot;citation&quot; data-cites=&quot;nickbarnes&quot;&gt;@nickbarnes&lt;/span&gt;&lt;/a&gt; As one of my grad students said to me, “I don&#39;t understand why ‘must share code’ is a radical opinion.”
 &lt;/p&gt;
 — Titus Brown (&lt;span class=&quot;citation&quot; data-cites=&quot;ctitusbrown&quot;&gt;@ctitusbrown&lt;/span&gt;) &lt;a href=&quot;https://twitter.com/ctitusbrown/statuses/382904483102982145&quot;&gt;September 25, 2013&lt;/a&gt;
 &lt;/blockquote&gt;
-
-
 &lt;p&gt;Nick Barnes suggests that this alone may be enough to improve code quality:&lt;/p&gt;
-&lt;blockquote class=&quot;twitter-tweet&quot;&gt;&lt;p&gt;
+&lt;blockquote class=&quot;twitter-tweet&quot;&gt;
+&lt;p&gt;
 &lt;a href=&quot;https://twitter.com/cboettig&quot;&gt;&lt;span class=&quot;citation&quot; data-cites=&quot;cboettig&quot;&gt;@cboettig&lt;/span&gt;&lt;/a&gt; &lt;a href=&quot;https://twitter.com/ctitusbrown&quot;&gt;&lt;span class=&quot;citation&quot; data-cites=&quot;ctitusbrown&quot;&gt;@ctitusbrown&lt;/span&gt;&lt;/a&gt; &lt;a href=&quot;https://twitter.com/kaythaney&quot;&gt;&lt;span class=&quot;citation&quot; data-cites=&quot;kaythaney&quot;&gt;@kaythaney&lt;/span&gt;&lt;/a&gt; require sharing. Pride will then rapidly lead to review and other improvement techniques.
 &lt;/p&gt;
 — Nick Barnes (&lt;span class=&quot;citation&quot; data-cites=&quot;nickbarnes&quot;&gt;@nickbarnes&lt;/span&gt;) &lt;a href=&quot;https://twitter.com/nickbarnes/statuses/382755320143282176&quot;&gt;September 25, 2013&lt;/a&gt;
 &lt;/blockquote&gt;
-
 &lt;p&gt;Certainly it will help, though not enough if the state of open source scientific software is any indication (Nick does acknowledge a rather geological notion of ‘rapid’). Smaller codes used in particular analyses will certainly feel this pressure more, as they will be easier to scrutinize.&lt;/p&gt;
 &lt;h3 id=&quot;so-what-might-we-learn-from-the-mozilla-code-review&quot;&gt;So what might we learn from the Mozilla Code review?&lt;/h3&gt;
 &lt;p&gt;Focusing on code appearing in-line in papers certainly addresses a different beast than large scientific software packages intended for reuse. As Roger observed, we will likely learn that scientists aren’t software engineers. We may learn how to use code to communicate more effectively. We may learn some lessons that apply for larger codebases involved in scientific software, but I think there the problem are often outside of the individual lines of code themselves and arise from other development practices.&lt;/p&gt;
@@ -1633,7 +1220,7 @@ Extended Version of the Birth-Death Models to
 &lt;ol type=&quot;1&quot;&gt;
 &lt;li&gt;Weitzman, M. L. Landing Fees vs Harvest Quotas with Uncertain Fish Stocks. Journal of Environmental Economics and Management 43, 325-338 (2002). (doi:10.1006/jeem.2000.1181)&lt;/li&gt;
 &lt;li&gt;Weitzman, M. L. A Precautionary Tale of Uncertain Tail Fattening. Environmental and Resource Economics 55, 159-173 (2013). (doi:10.1007/s10640-013-9646-y)&lt;/li&gt;
-&lt;li&gt;Weitzman, M. Structural uncertainty and the value of statistical life in the economics of catastrophic climate change. (2007). at &lt;a href=&quot;http://www.nber.org/papers/w13490&quot;&gt;http://www.nber.org/papers/w13490&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Weitzman, M. Structural uncertainty and the value of statistical life in the economics of catastrophic climate change. (2007). at &lt;a href=&quot;http://www.nber.org/papers/w13490&quot; class=&quot;uri&quot;&gt;http://www.nber.org/papers/w13490&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h4 id=&quot;ecoinformatics&quot;&gt;ecoinformatics&lt;/h4&gt;
 &lt;ol start=&quot;5&quot; type=&quot;1&quot;&gt;
@@ -2549,7 +2136,6 @@ tr &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;
 &lt;/ul&gt;
 &lt;p&gt;Kelp-urchin transition. Otters arrival leads to transitions in Vancouver Island set, resulting in shifts (used as training). San Nicolas Island sets transitions on its own, despite otter introduction in process. Spatial transects and 31 years of data, 5 replicate transects for all sites. Bayesian change-point analysis to identify shifts (e.g. see Erdman &amp;amp; Emerson 2012).&lt;/p&gt;
 &lt;!-- Prior probability that change-point occurs, and signal to noise ratio priors.  Get posterior prob distribution of tipping pt occurs - continuous.  --&gt;
-
 &lt;p&gt;Chatting with Mark after talk.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;SySnc / NCEAS Mixer&lt;/li&gt;
@@ -2721,7 +2307,7 @@ tr &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;
    <id>/07/25/formal-semantics-with-reml</id>
    <content type="html">&lt;p&gt;A lot has been happening in the &lt;code&gt;reml&lt;/code&gt; development over on our package Github page, particularly through discussion on the &lt;a href=&quot;http://ropensci.org/reml&quot;&gt;issues tracker&lt;/a&gt; we have been working through several of the major conceptual challenges in designing the package.&lt;/p&gt;
 &lt;h3 id=&quot;semantics&quot;&gt;Semantics&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;Writing Semantics&lt;/strong&gt;. Lots of elements of the EML schema have semantic meaning, but we can’t start leveraging ontological tools while these terms are defined only as part of the Schema vocabulary. In their current state, they are just “meaningless bits of syntax”, e.g. the schema only defines &lt;code&gt;gram&lt;/code&gt; as a valid text string that lives at &lt;code&gt;//attribute/measurementScale/ratio/unit/standardUnit&lt;/code&gt;. A computer reading the schema could never formally decide that this is the same gram we use to measure mass. We use formal semantics to say this: that is, that text-string &lt;code&gt;gram&lt;/code&gt; means &lt;a href=&quot;http://ecoinformatics.org/oboe/oboe.1.0/oboe-standards.owl#Gram&quot;&gt;http://ecoinformatics.org/oboe/oboe.1.0/oboe-standards.owl#Gram&lt;/a&gt;, which is embued with meaning.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Writing Semantics&lt;/strong&gt;. Lots of elements of the EML schema have semantic meaning, but we can’t start leveraging ontological tools while these terms are defined only as part of the Schema vocabulary. In their current state, they are just “meaningless bits of syntax”, e.g. the schema only defines &lt;code&gt;gram&lt;/code&gt; as a valid text string that lives at &lt;code&gt;//attribute/measurementScale/ratio/unit/standardUnit&lt;/code&gt;. A computer reading the schema could never formally decide that this is the same gram we use to measure mass. We use formal semantics to say this: that is, that text-string &lt;code&gt;gram&lt;/code&gt; means &lt;a href=&quot;http://ecoinformatics.org/oboe/oboe.1.0/oboe-standards.owl#Gram&quot; class=&quot;uri&quot;&gt;http://ecoinformatics.org/oboe/oboe.1.0/oboe-standards.owl#Gram&lt;/a&gt;, which is embued with meaning.&lt;/p&gt;
 &lt;p&gt;We’ve made some definite progress in how to go about making this leap from structure to meaning after considering a variety of potential avenues. A few &lt;a href=&quot;https://github.com/ropensci/reml/issues/5#issuecomment-21573824&quot;&gt;open questions&lt;/a&gt; (and a lot of implementation) remain. A useful observation comes from Ben in pointing out how we can add RDF directly to the EML, rather than relying on a second external schema file:&lt;/p&gt;
 &lt;pre class=&quot;sourceCode xml&quot;&gt;&lt;code class=&quot;sourceCode xml&quot;&gt;&lt;span class=&quot;kw&quot;&gt;&amp;lt;eml&amp;gt;&lt;/span&gt;
 …
@@ -2920,9 +2506,12 @@ XML:::&lt;span class=&quot;kw&quot;&gt;xmlAttrsToDataFrame&lt;/span&gt;(&lt;span
 &lt;p&gt;Make a copy of the database first&lt;/p&gt;
 &lt;pre class=&quot;sourceCode bash&quot;&gt;&lt;code class=&quot;sourceCode bash&quot;&gt;&lt;span class=&quot;kw&quot;&gt;cp&lt;/span&gt; ~/.local/share/data/Mendeley Ltd./Mendeley Desktop/cboettig@gmail.com@www.mendeley.com.sqlite tmp.sqlite&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Then in R, read in the database and show available tables (see &lt;a href=&quot;http://sandymuspratt.blogspot.com/2012/11/r-and-sqlite-part-1.html&quot;&gt;example tutorial&lt;/a&gt;):&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;{r} library(&#39;sqldf&#39;) db &amp;lt;- dbConnect(SQLite(), dbname=&amp;quot;tmp.sqlite&amp;quot;) dbListTables(db)&lt;/code&gt;&lt;/p&gt;
+&lt;pre class=&quot;{r}&quot;&gt;&lt;code&gt;library(&amp;#39;sqldf&amp;#39;)
+db &amp;lt;- dbConnect(SQLite(), dbname=&amp;quot;tmp.sqlite&amp;quot;)
+dbListTables(db)&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Most metadata for all documents in the library appears in table &lt;code&gt;Documents&lt;/code&gt;. &lt;code&gt;dbListFields&lt;/code&gt; shows the column headers, though alternatively we can just read this information into an R &lt;code&gt;data.frame&lt;/code&gt; (This makes sense for reasonable size databases; for large databases we will want to query the data via SQL commands directly rather than attempting to load it all into memory).&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;{r} dbListFields(db, &amp;quot;Documents&amp;quot;) documents &amp;lt;- dbReadTable(db, &amp;quot;Documents&amp;quot;)&lt;/code&gt;&lt;/p&gt;
+&lt;pre class=&quot;{r}&quot;&gt;&lt;code&gt;dbListFields(db, &amp;quot;Documents&amp;quot;)
+documents &amp;lt;- dbReadTable(db, &amp;quot;Documents&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Several useful fields are not included in this data frame. In particular, Author, Tag, Folder and Keywords. Some extra leg-work is needed to add this data. For instance &lt;code&gt;DocumentFolders&lt;/code&gt; gives us the map of each article &lt;code&gt;id&lt;/code&gt; to a folder &lt;code&gt;id&lt;/code&gt;, and then &lt;code&gt;Folders&lt;/code&gt; gives the details of that Folder.&lt;/p&gt;
 &lt;p&gt;Using the &lt;code&gt;data.table&lt;/code&gt; package, indexing by &lt;code&gt;id&lt;/code&gt;, and using join methods would probably be the most efficient way to do this. (example may follow when I get the chance).&lt;/p&gt;
 </content>
@@ -3045,8 +2634,8 @@ XML:::&lt;span class=&quot;kw&quot;&gt;xmlAttrsToDataFrame&lt;/span&gt;(&lt;span
 &lt;/ol&gt;
 &lt;h3 id=&quot;the-software&quot;&gt;The software&lt;/h3&gt;
 &lt;ol type=&quot;a&quot;&gt;
-&lt;li&gt;Is the software in a suitable repository? (see &lt;a href=&quot;http://openresearchsoftware.metajnl.com/about/repositories/&quot;&gt;http://openresearchsoftware.metajnl.com/about/repositories/&lt;/a&gt; for more information)&lt;/li&gt;
-&lt;li&gt;Does the software have a suitable open licence? (see &lt;a href=&quot;http://openresearchsoftware.metajnl.com/faq/#q5&quot;&gt;http://openresearchsoftware.metajnl.com/faq/#q5&lt;/a&gt; for more information)&lt;/li&gt;
+&lt;li&gt;Is the software in a suitable repository? (see &lt;a href=&quot;http://openresearchsoftware.metajnl.com/about/repositories/&quot; class=&quot;uri&quot;&gt;http://openresearchsoftware.metajnl.com/about/repositories/&lt;/a&gt; for more information)&lt;/li&gt;
+&lt;li&gt;Does the software have a suitable open licence? (see &lt;a href=&quot;http://openresearchsoftware.metajnl.com/faq/#q5&quot; class=&quot;uri&quot;&gt;http://openresearchsoftware.metajnl.com/faq/#q5&lt;/a&gt; for more information)&lt;/li&gt;
 &lt;li&gt;If the Archive section is filled out, is the link in the form of a persistent identifier, e.g. a DOI? Can you download the software from this link?&lt;/li&gt;
 &lt;li&gt;If the Code repository section is filled out, does the identifier link to the appropriate place to download the source code? Can you download the source code from this link?&lt;/li&gt;
 &lt;li&gt;Is the software license included in the software in the repository? Is it included in the source code?&lt;/li&gt;
@@ -3558,8 +3147,6 @@ Actually, I don&#39;t care.  Almost any journal publishing methodology recieves 
 
 
 --&gt;
-
-
 </content>
  </entry>
  
@@ -3601,7 +3188,7 @@ http://dx.doi.org/10.1126/science.1213847.&quot;&gt;&lt;a href=&quot;http://dx.d
 &lt;ul&gt;
 &lt;li&gt;Robert Gentleman, Duncan Temple Lang, (2007) Statistical Analyses And Reproducible Research. &lt;em&gt;Journal of Computational And Graphical Statistics&lt;/em&gt; &lt;strong&gt;16&lt;/strong&gt; &lt;a href=&quot;http://dx.doi.org/10.1198/106186007X178663&quot;&gt;10.1198/106186007X178663&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;R. D. Peng, (2011) Reproducible Research in Computational Science. &lt;em&gt;Science&lt;/em&gt; &lt;strong&gt;334&lt;/strong&gt; &lt;a href=&quot;http://dx.doi.org/10.1126/science.1213847&quot;&gt;10.1126/science.1213847&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Victoria Stodden, (2009) Enabling Reproducible Research: Open Licensing for Scientific Innovation. &lt;a href=&quot;http://papers.ssrn.com/sol3/papers.cfm?abstract_id=1362040&quot;&gt;http://papers.ssrn.com/sol3/papers.cfm?abstract_id=1362040&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Victoria Stodden, (2009) Enabling Reproducible Research: Open Licensing for Scientific Innovation. &lt;a href=&quot;http://papers.ssrn.com/sol3/papers.cfm?abstract_id=1362040&quot; class=&quot;uri&quot;&gt;http://papers.ssrn.com/sol3/papers.cfm?abstract_id=1362040&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;section class=&quot;footnotes&quot;&gt;
 &lt;hr /&gt;
@@ -4357,7 +3944,7 @@ mle_deviance &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span cl
 &lt;p&gt;The above derivation can be followed identically for the three-parameter recruitment functions I refer to as the Allen and Myers models after an appropriate choice of &lt;span class=&quot;math&quot;&gt;\(M_t\)&lt;/span&gt;. In both the Ricker and Allen models we must first reparamaterize the models to isolate the &lt;span class=&quot;math&quot;&gt;\(\alpha\)&lt;/span&gt; term correctly.&lt;/p&gt;
 &lt;h4 id=&quot;ricker&quot;&gt;Ricker&lt;/h4&gt;
 &lt;p&gt;The original parameterization&lt;/p&gt;
-&lt;p&gt;&lt;span class=&quot;math&quot;&gt;\[ X_{t+1} = X_t e^{r \left( 1 - \frac{X_t}{K}\right)}\]&lt;/span&gt; does not partition into the form above. Taking &lt;span class=&quot;math&quot;&gt;\(\beta =  \tfrac{r}{K}\)&lt;/span&gt; and &lt;span class=&quot;math&quot;&gt;\(a = r\)&lt;/span&gt;, we can write &lt;span class=&quot;math&quot;&gt;\(M_t\)&lt;/span&gt; as above,&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;math&quot;&gt;\[ X_{t+1} = X_t e^{r \left( 1 - \frac{X_t}{K}\right)}\]&lt;/span&gt; does not partition into the form above. Taking &lt;span class=&quot;math&quot;&gt;\(\beta = \tfrac{r}{K}\)&lt;/span&gt; and &lt;span class=&quot;math&quot;&gt;\(a = r\)&lt;/span&gt;, we can write &lt;span class=&quot;math&quot;&gt;\(M_t\)&lt;/span&gt; as above,&lt;/p&gt;
 &lt;p&gt;&lt;span class=&quot;math&quot;&gt;\[M_t := \log X_{t+1} - \log X_t + \beta X_t\]&lt;/span&gt;&lt;/p&gt;
 &lt;h4 id=&quot;myers&quot;&gt;Myers&lt;/h4&gt;
 &lt;p&gt;&lt;span class=&quot;math&quot;&gt;\[ X_{t+1} = \frac{ r X_t^{\theta} }{1 + \frac{X_t^{\theta}}{K} } Z_t\]&lt;/span&gt;&lt;/p&gt;
@@ -4382,13 +3969,13 @@ mle_deviance &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span cl
    <updated>2013-06-03T00:00:00+00:00</updated>
    <id>/06/03/DOI-citable</id>
    <content type="html">&lt;p&gt;I feel I see this kind of comment almost daily:&lt;/p&gt;
-&lt;blockquote class=&quot;twitter-tweet&quot; data-partner=&quot;tweetdeck&quot;&gt;&lt;p&gt;
+&lt;blockquote class=&quot;twitter-tweet&quot; data-partner=&quot;tweetdeck&quot;&gt;
+&lt;p&gt;
 Is there a way to obtain DOI for a &lt;a href=&quot;https://twitter.com/github&quot;&gt;&lt;span class=&quot;citation&quot; data-cites=&quot;github&quot;&gt;@github&lt;/span&gt;&lt;/a&gt; repository? (for citing &lt;a href=&quot;https://twitter.com/search?q=%23opensource&amp;amp;src=hash&quot;&gt;#opensource&lt;/a&gt; software packages, similar to &lt;a href=&quot;https://twitter.com/figshare&quot;&gt;&lt;span class=&quot;citation&quot; data-cites=&quot;figshare&quot;&gt;@figshare&lt;/span&gt;&lt;/a&gt; objects) &lt;a href=&quot;https://twitter.com/search?q=%23git&amp;amp;src=hash&quot;&gt;#git&lt;/a&gt;
 &lt;/p&gt;
 — Ahmed Moustafa (&lt;span class=&quot;citation&quot; data-cites=&quot;AhmedMoustafa&quot;&gt;@AhmedMoustafa&lt;/span&gt;) &lt;a href=&quot;https://twitter.com/AhmedMoustafa/statuses/339727912896954369&quot;&gt;May 29, 2013&lt;/a&gt;
 &lt;/blockquote&gt;
 &lt;script async src=&quot;//platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
-
 &lt;p&gt;Again and again, researchers suggest that DOI to makes something “citable”. And this &lt;a href=&quot;https://twitter.com/cboettig/status/337986074624282624&quot;&gt;frustrates me&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Don’t get me wrong. I love DOIs, and I love CrossRef. And I bang on the table when I have some old journal article that doesn’t yet have a DOI. I use DOIs every day in many ways. I use CrossRef’s APIs all the time to draw in metadata for citations in my notebook (through my &lt;a href=&quot;http://github.com/cboettig/knitcitations&quot;&gt;knitcitations&lt;/a&gt; package), and to import metadata into my reference manager, Mendeley. I’ve written my own implementations in R and ruby, and keep an eye on their exciting new tools on the &lt;a href=&quot;https://github.com/crossref&quot;&gt;Crossref Github page&lt;/a&gt;. I wrote to bibsonomy when I realized they were not using the CrossRef API to look up metadata by DOIs, and they have now implemented this feature. I use DOIs to look up papers I’ve come across, and to share content I am reading. (Crossref’s &lt;a href=&quot;http://shortdoi.org/&quot;&gt;DOI shortener&lt;/a&gt; is great for this). I even use DOI-based links to &lt;a href=&quot;http://carlboettiger.info/2013/02/22/semantic-citations-for-the-notebook-and-knitr.html&quot;&gt;embed semantic information&lt;/a&gt; into links and citations of articles.&lt;/p&gt;
 &lt;p&gt;But I still have no idea what researchers mean when they suggest that this makes something &lt;em&gt;citable&lt;/em&gt;.&lt;/p&gt;
@@ -4720,9 +4307,9 @@ opts_chunk$&lt;span class=&quot;kw&quot;&gt;set&lt;/span&gt;(&lt;span class=&quo
 &lt;h3 id=&quot;rcurl-query-from-scott&quot;&gt;RCurl query from Scott&lt;/h3&gt;
 &lt;p&gt;Translate a cURL command’s &lt;code&gt;-d&lt;/code&gt; flag to RCurl, e.g.&lt;/p&gt;
 &lt;pre class=&quot;sourceCode bash&quot;&gt;&lt;code class=&quot;sourceCode bash&quot;&gt;&lt;span class=&quot;kw&quot;&gt;curl&lt;/span&gt; -H &lt;span class=&quot;st&quot;&gt;&amp;quot;X-Gauges-Token: &amp;lt;token&amp;gt;&amp;quot;&lt;/span&gt; \
-     &lt;span class=&quot;kw&quot;&gt;-d&lt;/span&gt; &lt;span class=&quot;st&quot;&gt;&amp;quot;title=Example&amp;quot;&lt;/span&gt; \
-     &lt;span class=&quot;kw&quot;&gt;-d&lt;/span&gt; &lt;span class=&quot;st&quot;&gt;&amp;quot;tz=Eastern Time (US %26 Canada)&amp;quot;&lt;/span&gt; \
-     &lt;span class=&quot;kw&quot;&gt;https&lt;/span&gt;://secure.gaug.es/gauges&lt;/code&gt;&lt;/pre&gt;
+     -d &lt;span class=&quot;st&quot;&gt;&amp;quot;title=Example&amp;quot;&lt;/span&gt; \
+     -d &lt;span class=&quot;st&quot;&gt;&amp;quot;tz=Eastern Time (US %26 Canada)&amp;quot;&lt;/span&gt; \
+     https://secure.gaug.es/gauges&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;I proposed&lt;/p&gt;
 &lt;pre class=&quot;sourceCode r&quot;&gt;&lt;code class=&quot;sourceCode r&quot;&gt;&lt;span class=&quot;kw&quot;&gt;httpPOST&lt;/span&gt;(&lt;span class=&quot;st&quot;&gt;&amp;quot;https://secure.gaug.es/gauges&amp;quot;&lt;/span&gt;, 
          &lt;span class=&quot;dt&quot;&gt;postfields=&lt;/span&gt;&lt;span class=&quot;st&quot;&gt;&amp;quot;title=Example&amp;amp;tz=Eastern Time (US %26 Canada)&amp;quot;&lt;/span&gt;, 
@@ -5044,7 +4631,7 @@ http://dx.doi.org/10.1126/science.1231535.&quot;&gt;&lt;a href=&quot;http://dx.d
 &lt;h2 id=&quot;references&quot;&gt;References&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;L. N. Joppa, G. McInerny, R. Harper, L. Salido, K. Takeda, K. O’Hara, D. Gavaghan, S. Emmott, (2013) Troubling Trends in Scientific Software Use. &lt;em&gt;Science&lt;/em&gt; &lt;strong&gt;340&lt;/strong&gt; &lt;a href=&quot;http://dx.doi.org/10.1126/science.1231535&quot;&gt;10.1126/science.1231535&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Bruno et al. (2013) &lt;a href=&quot;https://peerj.com/preprints/19/&quot;&gt;https://peerj.com/preprints/19/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Bruno et al. (2013) &lt;a href=&quot;https://peerj.com/preprints/19/&quot; class=&quot;uri&quot;&gt;https://peerj.com/preprints/19/&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;section class=&quot;footnotes&quot;&gt;
 &lt;hr /&gt;
@@ -6293,14 +5880,14 @@ dt$method =&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;k
    <content type="html">&lt;p&gt;I now use the dynamic documentation software called &lt;a href=&quot;http://yihui.name/knitr&quot;&gt;knitr&lt;/a&gt; to write most entries that shore results and figures. The code to replicate the results is included automatically, ensuring that what I say I did and what code I actually ran to get the results are consistent. Though I have written about knitr before, both regarding its &lt;a href=&quot;http://carlboettiger.info/2012/03/21/knitr-github-and-a-new-phase-for-the-lab-notebook.html&quot;&gt;use in my notebook&lt;/a&gt; and &lt;a href=&quot;http://carlboettiger.info/2012/04/07/writing-reproducibly-in-the-open-with-knitr.html&quot;&gt;in my manuscripts&lt;/a&gt;, here I provide a quick summary of how a reader might actually reproduce a figure or result they come across in the notebook, as well as some of the possible problems involved.&lt;/p&gt;
 &lt;p&gt;As the code required for any given analysis can be quite involved, it is not pratical to provide free-standing scripts in this way. Instead, I write the algorithms as functions provided by an R package dedicated to the project, e.g. &lt;a href=&quot;http://github.com/cboettig/nonparametric-bayes&quot;&gt;nonparametric-bayes&lt;/a&gt;, &lt;a href=&quot;http://github.com/cboettig/multiple_uncertainty&quot;&gt;multiple-uncertainty&lt;/a&gt;, or &lt;a href=&quot;http://github.com/cboettig/earlywarning&quot;&gt;warning-signals&lt;/a&gt;, which is version-managed on Github. The code displayed in the post can then be limited to the specific calls to analysis, data manipulation, and plotting functions unique to the exploration shown, without repeating the code for all algorithms involved.&lt;/p&gt;
 &lt;p&gt;The code for the analyses is also stored on github using the same dynamic documentation approach with knitr. These scripts are found in the &lt;code&gt;inst/examples&lt;/code&gt; directory of my packages. This approach allows a given analysis to evolve with my research in a more tractable way than simply pasting updated copies as successive notebook entries. The notebook entries then become a place for me to synthesize the results of a script.&lt;/p&gt;
-&lt;p&gt;Though the package functions are usually backwards-compatible, proper reproducibility is only attained by having the version of the package from time of the result. This is easily accomplished by the seemless integration of Github and R using the devtools package. Consider a figure from a page of the notebook, such as the final histogram plot from &lt;a href=&quot;http://www.carlboettiger.info/2012/12/20/results-comparing-gp-to-parametric.html&quot;&gt;this entry&lt;/a&gt;. The entry links to the script responsible for the figure, &lt;a href=&quot;https://github.com/cboettig/nonparametric-bayes/blob/9d5cd1f027bdfe5f356dce83756726c95a6fcdd8/inst/examples/myers-exploration.md&quot;&gt;https://github.com/cboettig/nonparametric-bayes/blob/9d5cd1f027bdfe5f356dce83756726c95a6fcdd8/inst/examples/myers-exploration.md&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Though the package functions are usually backwards-compatible, proper reproducibility is only attained by having the version of the package from time of the result. This is easily accomplished by the seemless integration of Github and R using the devtools package. Consider a figure from a page of the notebook, such as the final histogram plot from &lt;a href=&quot;http://www.carlboettiger.info/2012/12/20/results-comparing-gp-to-parametric.html&quot;&gt;this entry&lt;/a&gt;. The entry links to the script responsible for the figure, &lt;a href=&quot;https://github.com/cboettig/nonparametric-bayes/blob/9d5cd1f027bdfe5f356dce83756726c95a6fcdd8/inst/examples/myers-exploration.md&quot; class=&quot;uri&quot;&gt;https://github.com/cboettig/nonparametric-bayes/blob/9d5cd1f027bdfe5f356dce83756726c95a6fcdd8/inst/examples/myers-exploration.md&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;We can install the entire research compendium at exactly the state it was at the time of the analysis using the hash (long chain of seemingly random characters, see the (upcoming) entry on &lt;a href=&quot;&quot;&gt;hashes&lt;/a&gt;) using the clever &lt;code&gt;devtools&lt;/code&gt; R package,&lt;/p&gt;
 &lt;pre class=&quot;sourceCode r&quot;&gt;&lt;code class=&quot;sourceCode r&quot;&gt;&lt;span class=&quot;kw&quot;&gt;install_github&lt;/span&gt;(&lt;span class=&quot;st&quot;&gt;&amp;quot;nonparametric-bayes&amp;quot;&lt;/span&gt;, &lt;span class=&quot;st&quot;&gt;&amp;quot;cboettig&amp;quot;&lt;/span&gt;, &lt;span class=&quot;st&quot;&gt;&amp;quot;9d5cd1f027bdfe5f356dce83756726c95a6fcdd8&amp;quot;&lt;/span&gt;) &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;We can then copy and paste the code linked from the figure to replicate the results. This provides a fast and effective way replicate the work appearing in or linked to any entry. More importantly perhaps, this approach also allows one to repeat any given analysis with the most recent version of an algorithm and compare the results, since the package structure provides a logical seperation between algorithm and analysis. In practice such fine-grained control and invistigation is more important than simply being able to regenerate what has already been done without any further input.&lt;/p&gt;
 &lt;p&gt;This is not entirely failsafe. The package may depend on other packages, which themselves may have changed. For my use cases, it is a deal more reliable than running the current version of a package that is actively changing during my research. Readers interested in even more robust replication and verification should take a look at Roger Peng’s package &lt;code&gt;stashR&lt;/code&gt; package and associated publications &lt;span class=&quot;showtooltip&quot; data-html=&quot;true&quot; title=&quot;&lt;p&gt;Eckel S and Peng RD (2012). stashR: A Set of Tools for Administering SHared Repositories. R package version 0.3-5.“&amp;gt;&lt;a href=&quot;http://CRAN.R-project.org/package=stashR&quot;&gt;Eckel &amp;amp; Peng (2012)&lt;/a&gt;&lt;/span&gt; .&lt;/p&gt;
 &lt;h2 id=&quot;references&quot;&gt;References&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;Sandy Eckel, Roger Peng, (2012) stashR: A Set of Tools for Administering SHared Repositories. &lt;a href=&quot;http://CRAN.R-project.org/package=stashR&quot;&gt;http://CRAN.R-project.org/package=stashR&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Sandy Eckel, Roger Peng, (2012) stashR: A Set of Tools for Administering SHared Repositories. &lt;a href=&quot;http://CRAN.R-project.org/package=stashR&quot; class=&quot;uri&quot;&gt;http://CRAN.R-project.org/package=stashR&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </content>
  </entry>
@@ -6400,13 +5987,13 @@ dt$method =&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;k
 &lt;p&gt;A testable, counter-intuitive prediction of stochastic population theory is that, on average, for any interior interval of the domain of biologically attainable population sizes, the expected duration of increase equals the expected duration of decline. Here we report the first empirical tests of this hypothesis.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;I do feel that this is an overstatement of the stochastic theory as I understand it – these times should only scale in a similar way, but can differ by an arbitrary coefficient. Indeed it is often the goal of the deviation theory analysis to determine this coefficent, see &lt;span class=&quot;showtooltip&quot; data-html=&quot;true&quot; title=&quot;Faure M and Schreiber SJ (2011). “Quasi-Stationary distributions for Randomly perturbed dynamical systems.” .&quot;&gt;&lt;a href=&quot;http://arxiv.org/abs/1101.3420&quot; rel=&quot;http://purl.org/spar/cito/citesAsAuthority&quot; &gt;Faure &amp;amp; Schreiber (2011)&lt;/a&gt;&lt;/span&gt; . The authors seem quite concerned that theory they refer to applies to continuously valued diffusion processes alone, whereas I’m quite certain the more general results of the deviation theory hold just as well in discrete systems. (Perhaps this explains why they do not confirm this prediction in some subset of the data). Nevertheless, the context is the same as we consider – comparing the return time to a stable point from some small population size with the time required to decline from that point to a small size, as clearly indicated in Figure 1 of the manuscript.&lt;/p&gt;
-&lt;p&gt;Commendably, the authors make the data and code available (as an R script and .Rdata file). (According to the manuscript, this data is at &lt;a href=&quot;http://dragonfly.ecology.uga.edu/drakelab/data.html&quot;&gt;http://dragonfly.ecology.uga.edu/drakelab/data.html&lt;/a&gt;, but in an example of link rot and the risk of independent archiving the lab prefers daphnia to dragonfly, and the data can now be found: &lt;a href=&quot;http://daphnia.ecology.uga.edu/drakelab/datapage.html&quot;&gt;http://daphnia.ecology.uga.edu/drakelab/datapage.html&lt;/a&gt;). These data draw on work from earlier experiments that provide some of the nicest sources of time series leading up to stochastic extinctions. Unfortunately it appears that only the duration of growth and extinction times for the replicates are shown in the data provided for this paper, I don’t see the actual timeseries themselves (which would be interesting to look at more closely).&lt;/p&gt;
+&lt;p&gt;Commendably, the authors make the data and code available (as an R script and .Rdata file). (According to the manuscript, this data is at &lt;a href=&quot;http://dragonfly.ecology.uga.edu/drakelab/data.html&quot; class=&quot;uri&quot;&gt;http://dragonfly.ecology.uga.edu/drakelab/data.html&lt;/a&gt;, but in an example of link rot and the risk of independent archiving the lab prefers daphnia to dragonfly, and the data can now be found: &lt;a href=&quot;http://daphnia.ecology.uga.edu/drakelab/datapage.html&quot; class=&quot;uri&quot;&gt;http://daphnia.ecology.uga.edu/drakelab/datapage.html&lt;/a&gt;). These data draw on work from earlier experiments that provide some of the nicest sources of time series leading up to stochastic extinctions. Unfortunately it appears that only the duration of growth and extinction times for the replicates are shown in the data provided for this paper, I don’t see the actual timeseries themselves (which would be interesting to look at more closely).&lt;/p&gt;
 &lt;h2 id=&quot;references&quot;&gt;References&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;John M. Drake, Blaine D. Griffen, (2009) Speed of Expansion And Extinction in Experimental Populations. &lt;em&gt;Ecology Letters&lt;/em&gt; &lt;strong&gt;12&lt;/strong&gt; 772-778 &lt;a href=&quot;http://dx.doi.org/10.1111/j.1461-0248.2009.01325.x&quot;&gt;10.1111/j.1461-0248.2009.01325.x&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Mark Freidlin, Alexander Wentzell, (1998) {Random Perturbations of Dynamical Systems (Grundlehren der mathematischen Wissenschaften)}. 429-NA &lt;a href=&quot;http://www.amazon.com/Perturbations-Dynamical-Grundlehren-mathematischen-Wissenschaften/dp/0387983627&quot;&gt;http://www.amazon.com/Perturbations-Dynamical-Grundlehren-mathematischen-Wissenschaften/dp/0387983627&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;R Lande, (1985) Expected time for random genetic drift of a population between stable phenotypic states. &lt;em&gt;Proceedings of the National Academy of Sciences&lt;/em&gt; &lt;a href=&quot;http://www.pnas.org/content/82/22/7641.short&quot;&gt;http://www.pnas.org/content/82/22/7641.short&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Mathieu Faure, Sebastian Schreiber, (2011) Quasi-Stationary distributions for Randomly perturbed dynamical systems. &lt;em&gt;arXiv.org&lt;/em&gt; &lt;a href=&quot;http://arxiv.org/abs/1101.3420&quot;&gt;http://arxiv.org/abs/1101.3420&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Mark Freidlin, Alexander Wentzell, (1998) {Random Perturbations of Dynamical Systems (Grundlehren der mathematischen Wissenschaften)}. 429-NA &lt;a href=&quot;http://www.amazon.com/Perturbations-Dynamical-Grundlehren-mathematischen-Wissenschaften/dp/0387983627&quot; class=&quot;uri&quot;&gt;http://www.amazon.com/Perturbations-Dynamical-Grundlehren-mathematischen-Wissenschaften/dp/0387983627&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;R Lande, (1985) Expected time for random genetic drift of a population between stable phenotypic states. &lt;em&gt;Proceedings of the National Academy of Sciences&lt;/em&gt; &lt;a href=&quot;http://www.pnas.org/content/82/22/7641.short&quot; class=&quot;uri&quot;&gt;http://www.pnas.org/content/82/22/7641.short&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Mathieu Faure, Sebastian Schreiber, (2011) Quasi-Stationary distributions for Randomly perturbed dynamical systems. &lt;em&gt;arXiv.org&lt;/em&gt; &lt;a href=&quot;http://arxiv.org/abs/1101.3420&quot; class=&quot;uri&quot;&gt;http://arxiv.org/abs/1101.3420&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </content>
  </entry>
@@ -6575,10 +6162,10 @@ policies &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=
 &lt;li&gt;finish ews-review reply&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&quot;geospatial-coordinates-from-plain-text&quot;&gt;Geospatial coordinates from plain text&lt;/h2&gt;
-&lt;p&gt;Discussed the problem of geolocation from plain text discriptions with Simon a few days ago. I’ve written a simple i&lt;a href=&quot;https://github.com/cboettig/sandbox/blob/29ab32342e9c07272b4796778cd86d518368b3b2/R-tricks/fishphotos.R&quot;&gt;R function to query place names against the Google Map API&lt;/a&gt;, but as Simon has demonstrated, this will often return the coordinates of a cafe in San Fransisco rather than the lake in Italy you meant to get. At DataCite 2011 I had met some folks who mentioned developing a machine learning algorithm for this, though stupidly it looks like I did not record this in my &lt;a href=&quot;http://carlboettiger.info/2011/08/24/datacite-day-1.html&quot;&gt;notes&lt;/a&gt;. Oh well, Google turned up the following interface: &lt;a href=&quot;http://geoparser.digmap.eu/advanced.jsp&quot;&gt;http://geoparser.digmap.eu/advanced.jsp&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Discussed the problem of geolocation from plain text discriptions with Simon a few days ago. I’ve written a simple i&lt;a href=&quot;https://github.com/cboettig/sandbox/blob/29ab32342e9c07272b4796778cd86d518368b3b2/R-tricks/fishphotos.R&quot;&gt;R function to query place names against the Google Map API&lt;/a&gt;, but as Simon has demonstrated, this will often return the coordinates of a cafe in San Fransisco rather than the lake in Italy you meant to get. At DataCite 2011 I had met some folks who mentioned developing a machine learning algorithm for this, though stupidly it looks like I did not record this in my &lt;a href=&quot;http://carlboettiger.info/2011/08/24/datacite-day-1.html&quot;&gt;notes&lt;/a&gt;. Oh well, Google turned up the following interface: &lt;a href=&quot;http://geoparser.digmap.eu/advanced.jsp&quot; class=&quot;uri&quot;&gt;http://geoparser.digmap.eu/advanced.jsp&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Click the geoparse example and scroll down in the XML; they assign probabilities of possible spatial matches. For instance, Hiroshima as the name of a “railroad station” gets 0.05 probability, whereas the majority of the weight falls on “populated place” in Japan.&lt;/p&gt;
 &lt;p&gt;It looks like you could query against the service directly, haven’t really explored.&lt;/p&gt;
-&lt;p&gt;They have a paper out on this too, &lt;a href=&quot;http://oa.upm.es/4367/1/INVE_MEM_2008_60075.pdf&quot;&gt;http://oa.upm.es/4367/1/INVE_MEM_2008_60075.pdf&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;They have a paper out on this too, &lt;a href=&quot;http://oa.upm.es/4367/1/INVE_MEM_2008_60075.pdf&quot; class=&quot;uri&quot;&gt;http://oa.upm.es/4367/1/INVE_MEM_2008_60075.pdf&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&quot;reading&quot;&gt;Reading&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;span class=&quot;showtooltip&quot; data-html=&quot;true&quot; title=&quot;&lt;p&gt;Shelton A, Satterthwaite W, Beakes M, Munch S, Sogard S and Mangel M (2013). “Separating Intrinsic And Environmental Contributions to Growth And Their Population Consequences.” The American Naturalist, pp. 000–000. ISSN 00030147.“&amp;gt;&lt;a href=&quot;http://dx.doi.org/10.1086/670198&quot; rel=&quot;http://purl.org/spar/cito/discusses&quot; &gt;Shelton &lt;em&gt;et. al.&lt;/em&gt; (2013)&lt;/a&gt;&lt;/span&gt; provide a rather elegant example of how accounting for individual variation improves modeling efforts in growth dynamics.&lt;br /&gt;&lt;/li&gt;
@@ -6948,7 +6535,7 @@ out &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot
 &lt;li&gt;Donald Ludwig, Carl J. Walters, (1981) Measurement Errors And Uncertainty in Parameter Estimates For Stock And Recruitment. &lt;em&gt;Canadian Journal of Fisheries And Aquatic Sciences&lt;/em&gt; &lt;strong&gt;38&lt;/strong&gt; 711-720 &lt;a href=&quot;http://dx.doi.org/10.1139/f81-094&quot;&gt;10.1139/f81-094&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Zeev Schuss, Bernard J. Matkowsky, (1979) The Exit Problem: A New Approach to Diffusion Across Potential Barriers. &lt;em&gt;Siam Journal on Applied Mathematics&lt;/em&gt; &lt;strong&gt;36&lt;/strong&gt; 604-623 &lt;a href=&quot;http://dx.doi.org/10.1137/0136043&quot;&gt;10.1137/0136043&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;R. Streeter, A. J. Dugmore, (2013) Anticipating Land Surface Change. &lt;em&gt;Proceedings of The National Academy of Sciences&lt;/em&gt; &lt;strong&gt;110&lt;/strong&gt; 5779-5784 &lt;a href=&quot;http://dx.doi.org/10.1073/pnas.1220161110&quot;&gt;10.1073/pnas.1220161110&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Ethan White, Elita Baldridge, Zachary Brym, Kenneth Locey, Daniel McGlinn, Sarah Supp, (2013) Nine simple ways to make it easier to (re)use your data. &lt;em&gt;PeerJ PrePrints&lt;/em&gt; &lt;a href=&quot;http://peerj.com/preprints/7&quot;&gt;http://peerj.com/preprints/7&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Ethan White, Elita Baldridge, Zachary Brym, Kenneth Locey, Daniel McGlinn, Sarah Supp, (2013) Nine simple ways to make it easier to (re)use your data. &lt;em&gt;PeerJ PrePrints&lt;/em&gt; &lt;a href=&quot;http://peerj.com/preprints/7&quot; class=&quot;uri&quot;&gt;http://peerj.com/preprints/7&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Donald Ludwig, (1981). Escape from Domains of Attraction for Systems Perturbed by Noise, Nonlinear Phenomena in Physics and Biology.&lt;/li&gt;
 &lt;/ul&gt;
 </content>
@@ -7008,7 +6595,7 @@ http://www.pnas.org/content/82/22/7641.abstract.&quot;&gt;&lt;a href=&quot;http:
 &lt;p&gt;&lt;span class=&quot;math&quot;&gt;\[dX = - X dt + \sigma dB_t\]&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;We ask for the return time into a neighborhood &lt;span class=&quot;math&quot;&gt;\(\sigma\)&lt;/span&gt; of the origin, starting at &lt;span class=&quot;math&quot;&gt;\(X_0 = L\)&lt;/span&gt; distant from the origin. The deterministic solution&lt;/p&gt;
 &lt;p&gt;&lt;span class=&quot;math&quot;&gt;\[ \tfrac{dx}{dt} = - x \]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;implies &lt;span class=&quot;math&quot;&gt;\(x_t = L (1 - e^{-t}) \)&lt;/span&gt;, so setting &lt;span class=&quot;math&quot;&gt;\(x_t = \sigma_t\)&lt;/span&gt; and solving for &lt;span class=&quot;math&quot;&gt;\(t\)&lt;/span&gt;, we find that &lt;span class=&quot;math&quot;&gt;\(x_t\)&lt;/span&gt; is within &lt;span class=&quot;math&quot;&gt;\(\sigma\)&lt;/span&gt; of &lt;span class=&quot;math&quot;&gt;\(t\)&lt;/span&gt; in time &lt;span class=&quot;math&quot;&gt;\(\log{L} - \log{\sigma}\)&lt;/span&gt;, or &lt;span class=&quot;math&quot;&gt;\(\log{L/\sigma}\)&lt;/span&gt;, as claimed.&lt;/p&gt;
+&lt;p&gt;implies $x_t = L (1 - e^{-t}) $, so setting &lt;span class=&quot;math&quot;&gt;\(x_t = \sigma_t\)&lt;/span&gt; and solving for &lt;span class=&quot;math&quot;&gt;\(t\)&lt;/span&gt;, we find that &lt;span class=&quot;math&quot;&gt;\(x_t\)&lt;/span&gt; is within &lt;span class=&quot;math&quot;&gt;\(\sigma\)&lt;/span&gt; of &lt;span class=&quot;math&quot;&gt;\(t\)&lt;/span&gt; in time &lt;span class=&quot;math&quot;&gt;\(\log{L} - \log{\sigma}\)&lt;/span&gt;, or &lt;span class=&quot;math&quot;&gt;\(\log{L/\sigma}\)&lt;/span&gt;, as claimed.&lt;/p&gt;
 &lt;h2 id=&quot;waiting-time&quot;&gt;Waiting time&lt;/h2&gt;
 &lt;p&gt;The time we must wait before any trajectory can reach a given boundary is a classic hitting-time problem for the OU process that can be solved in several ways. Any of these basically start from PDE that must be satisfied for the hitting time (e.g. see Crispin Gardner, Stochastic Methods) for the OU process at stationary state (&lt;span class=&quot;math&quot;&gt;\(T_t = 0\)&lt;/span&gt;),&lt;/p&gt;
 &lt;p&gt;&lt;span class=&quot;math&quot;&gt;\[ \tfrac{\sigma^2}{2} T_{xx} - x T_x = -1 \]&lt;/span&gt;&lt;/p&gt;
@@ -7042,7 +6629,7 @@ http://www.pnas.org/content/82/22/7641.abstract.&quot;&gt;&lt;a href=&quot;http:
 &lt;h2 id=&quot;references&quot;&gt;References&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;C. Boettiger, A. Hastings, (2012) Early Warning Signals And The Prosecutor’S Fallacy. &lt;em&gt;Proceedings of The Royal Society B: Biological Sciences&lt;/em&gt; &lt;strong&gt;279&lt;/strong&gt; 4734-4739 &lt;a href=&quot;http://dx.doi.org/10.1098/rspb.2012.2085&quot;&gt;10.1098/rspb.2012.2085&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;R Lande, (1985) Expected time for random genetic drift of a population between stable phenotypic states. &lt;em&gt;Proceedings of the National Academy of Sciences&lt;/em&gt; &lt;a href=&quot;http://www.pnas.org/content/82/22/7641.abstract&quot;&gt;http://www.pnas.org/content/82/22/7641.abstract&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;R Lande, (1985) Expected time for random genetic drift of a population between stable phenotypic states. &lt;em&gt;Proceedings of the National Academy of Sciences&lt;/em&gt; &lt;a href=&quot;http://www.pnas.org/content/82/22/7641.abstract&quot; class=&quot;uri&quot;&gt;http://www.pnas.org/content/82/22/7641.abstract&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </content>
  </entry>
@@ -8028,8 +7615,8 @@ _Methods in Ecology And Evolution_.
 http://dx.doi.org/10.1111/2041-210X.12044.&quot;&gt;&lt;a href=&quot;http://dx.doi.org/10.1111/2041-210X.12044&quot; rel=&quot;http://purl.org/spar/cito/discusses&quot; &gt;Bolker &lt;em&gt;et. al.&lt;/em&gt; 2013&lt;/a&gt;&lt;/span&gt;), and the &lt;a href=&quot;https://groups.nceas.ucsb.edu/non-linear-modeling/projects&quot;&gt;code and data for each of the examples they discuss&lt;/a&gt;. Lessons in the mansucript may be familiar to many, but should still be taught more widely in ecology. Should be useful for teaching this stuff in graduate courses too.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Benjamin M. Bolker, Beth Gardner, Mark Maunder, Casper W. Berg, Mollie Brooks, Liza Comita, Elizabeth Crone, Sarah Cubaynes, Trevor Davies, Perry de Valpine, Jessica Ford, Olivier Gimenez, Marc Kery, Eun Jung Kim, Cleridy Lennert-Cody, Arni Magnusson, Steve Martell, John Nash, Anders Nielsen, Jim Regetz, Hans Skaug, Elise Zipkin, (2013) Strategies For Fitting Nonlinear Ecological Models in R, ad Model Builder, And Bugs. &lt;em&gt;Methods in Ecology And Evolution&lt;/em&gt; &lt;a href=&quot;http://dx.doi.org/10.1111/2041-210X.12044&quot;&gt;10.1111/2041-210X.12044&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;davidshotton, (2013) CiTO Reference Annotation Tools. &lt;em&gt;Semantic Publishing&lt;/em&gt; &lt;a href=&quot;http://semanticpublishing.wordpress.com/2013/02/26/cito-tools/&quot;&gt;http://semanticpublishing.wordpress.com/2013/02/26/cito-tools/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;davidshotton, (2013) Ten next steps for semantic authors and publishers. &lt;em&gt;Semantic Publishing&lt;/em&gt; &lt;a href=&quot;http://semanticpublishing.wordpress.com/2013/02/26/ten-next-steps/&quot;&gt;http://semanticpublishing.wordpress.com/2013/02/26/ten-next-steps/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;davidshotton, (2013) CiTO Reference Annotation Tools. &lt;em&gt;Semantic Publishing&lt;/em&gt; &lt;a href=&quot;http://semanticpublishing.wordpress.com/2013/02/26/cito-tools/&quot; class=&quot;uri&quot;&gt;http://semanticpublishing.wordpress.com/2013/02/26/cito-tools/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;davidshotton, (2013) Ten next steps for semantic authors and publishers. &lt;em&gt;Semantic Publishing&lt;/em&gt; &lt;a href=&quot;http://semanticpublishing.wordpress.com/2013/02/26/ten-next-steps/&quot; class=&quot;uri&quot;&gt;http://semanticpublishing.wordpress.com/2013/02/26/ten-next-steps/&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </content>
  </entry>
@@ -8098,7 +7685,7 @@ http://dx.doi.org/10.1371/journal.pbio.1001466.&quot;&gt;&lt;a href=&quot;http:/
 &lt;li&gt;C. T. Perretti, S. B. Munch, G. Sugihara, (2013) Model-Free Forecasting Outperforms The Correct Mechanistic Model For Simulated And Experimental Data. &lt;em&gt;Proceedings of The National Academy of Sciences&lt;/em&gt; &lt;a href=&quot;http://dx.doi.org/10.1073/pnas.1216076110&quot;&gt;10.1073/pnas.1216076110&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;William M. Schaffer, (1984) Stretching And Folding in Lynx Fur Returns: Evidence For A Strange Attractor in Nature?. &lt;em&gt;The American Naturalist&lt;/em&gt; &lt;strong&gt;124&lt;/strong&gt; &lt;a href=&quot;http://dx.doi.org/10.1086/284318&quot;&gt;10.1086/284318&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;John Wiedenmann, Katherine A. Cresswell, Jeremy Goldbogen, Jean Potvin, Marc Mangel, (2011) Exploring The Effects of Reductions in Krill Biomass in The Southern Ocean on Blue Whales Using A State-Dependent Foraging Model. &lt;em&gt;Ecological Modelling&lt;/em&gt; &lt;strong&gt;222&lt;/strong&gt; &lt;a href=&quot;http://dx.doi.org/10.1016/j.ecolmodel.2011.07.013&quot;&gt;10.1016/j.ecolmodel.2011.07.013&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Assessing the Reliability of Complex Models: Mathematical and Statistical Foundations of Verification, Validation, and Uncertainty Quantification. &lt;a href=&quot;http://www.nap.edu/catalog.php?record_id=13395&quot;&gt;http://www.nap.edu/catalog.php?record_id=13395&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Assessing the Reliability of Complex Models: Mathematical and Statistical Foundations of Verification, Validation, and Uncertainty Quantification. &lt;a href=&quot;http://www.nap.edu/catalog.php?record_id=13395&quot; class=&quot;uri&quot;&gt;http://www.nap.edu/catalog.php?record_id=13395&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </content>
  </entry>
@@ -8201,29 +7788,29 @@ http://knowledgeblog.org/greycite [Online. last-accessed:
                       bibo: http://purl.org/ontology/bibo/,
                       foaf: http://xmlns.com/foaf/spec/,
                       biro: http://purl.org/spar/biro/&quot; rel=&quot;http://purl.org/spar/biro/ReferenceList&quot;&gt;
-&lt;ul class=&#39;bibliography&#39;&gt; 
-&lt;li&gt; 
+&lt;ul class=&quot;bibliography&quot;&gt;
+&lt;li&gt;
 &lt;span property=&quot;dc:title&quot;&gt;The Stability of Malaria Elimination.&lt;/span&gt; &lt;span property=&quot;dc:creator&quot;&gt; &lt;span property=&quot;foaf:givenName&quot;&gt;C.&lt;/span&gt; &lt;span property=&quot;foaf:familyName&quot;&gt;Chiyaka&lt;/span&gt;, &lt;/span&gt;&lt;span property=&quot;dc:creator&quot;&gt; &lt;span property=&quot;foaf:givenName&quot;&gt;A. J.&lt;/span&gt; &lt;span property=&quot;foaf:familyName&quot;&gt;Tatem&lt;/span&gt;, &lt;/span&gt;&lt;span property=&quot;dc:creator&quot;&gt; &lt;span property=&quot;foaf:givenName&quot;&gt;J. M.&lt;/span&gt; &lt;span property=&quot;foaf:familyName&quot;&gt;Cohen&lt;/span&gt;, &lt;/span&gt;&lt;span property=&quot;dc:creator&quot;&gt; &lt;span property=&quot;foaf:givenName&quot;&gt;P. W.&lt;/span&gt; &lt;span property=&quot;foaf:familyName&quot;&gt;Gething&lt;/span&gt;, &lt;/span&gt;&lt;span property=&quot;dc:creator&quot;&gt; &lt;span property=&quot;foaf:givenName&quot;&gt;G.&lt;/span&gt; &lt;span property=&quot;foaf:familyName&quot;&gt;Johnston&lt;/span&gt;, &lt;/span&gt;&lt;span property=&quot;dc:creator&quot;&gt; &lt;span property=&quot;foaf:givenName&quot;&gt;R.&lt;/span&gt; &lt;span property=&quot;foaf:familyName&quot;&gt;Gosling&lt;/span&gt;, &lt;/span&gt;&lt;span property=&quot;dc:creator&quot;&gt; &lt;span property=&quot;foaf:givenName&quot;&gt;R.&lt;/span&gt; &lt;span property=&quot;foaf:familyName&quot;&gt;Laxminarayan&lt;/span&gt;, &lt;/span&gt;&lt;span property=&quot;dc:creator&quot;&gt; &lt;span property=&quot;foaf:givenName&quot;&gt;S. I.&lt;/span&gt; &lt;span property=&quot;foaf:familyName&quot;&gt;Hay&lt;/span&gt;, &lt;/span&gt;&lt;span property=&quot;dc:creator&quot;&gt; &lt;span property=&quot;foaf:givenName&quot;&gt;D. L.&lt;/span&gt; &lt;span property=&quot;foaf:familyName&quot;&gt;Smith&lt;/span&gt;, &lt;/span&gt; (&lt;span property=&quot;dc:date&quot;&gt;2013&lt;/span&gt;) &lt;span rel=&quot;http://purl.org/dc/terms/isPartOf&quot; resource=&quot;[http://purl.org/dc/terms/journal]&quot;&gt; &lt;span property=&quot;http://purl.org/dc/terms/title&quot; content=&quot; Science &quot;&gt; &lt;/span&gt; &lt;span property=&quot;bibo:shortTitle&quot;&gt; Science &lt;/span&gt; &lt;/span&gt; &lt;span property=&quot;bibo:volume&quot;&gt;339&lt;/span&gt; &lt;a property=&quot;bibo:doi&quot; href=&quot;http://dx.doi.org/10.1126/science.1229509&quot;&gt;10.1126/science.1229509&lt;/a&gt;
 &lt;/li&gt;
-&lt;li&gt; 
+&lt;li&gt;
 &lt;span property=&quot;dc:title&quot;&gt;Natural Selection. V. How to Read The Fundamental Equations of Evolutionary Change in Terms of Information Theory.&lt;/span&gt; &lt;span property=&quot;dc:creator&quot;&gt; &lt;span property=&quot;foaf:givenName&quot;&gt;S. A.&lt;/span&gt; &lt;span property=&quot;foaf:familyName&quot;&gt;Frank&lt;/span&gt;, &lt;/span&gt; (&lt;span property=&quot;dc:date&quot;&gt;2012&lt;/span&gt;) &lt;span rel=&quot;http://purl.org/dc/terms/isPartOf&quot; resource=&quot;[http://purl.org/dc/terms/journal]&quot;&gt; &lt;span property=&quot;http://purl.org/dc/terms/title&quot; content=&quot; Journal of Evolutionary Biology &quot;&gt; &lt;/span&gt; &lt;span property=&quot;bibo:shortTitle&quot;&gt; Journal of Evolutionary Biology &lt;/span&gt; &lt;/span&gt; &lt;span property=&quot;bibo:volume&quot;&gt;25&lt;/span&gt; &lt;a property=&quot;bibo:doi&quot; href=&quot;http://dx.doi.org/10.1111/jeb.12010&quot;&gt;10.1111/jeb.12010&lt;/a&gt;
 &lt;/li&gt;
-&lt;li&gt; 
+&lt;li&gt;
 &lt;span property=&quot;dc:title&quot;&gt;Fisheries: Does Catch Reflect Abundance?.&lt;/span&gt; &lt;span property=&quot;dc:creator&quot;&gt; &lt;span property=&quot;foaf:givenName&quot;&gt;Daniel&lt;/span&gt; &lt;span property=&quot;foaf:familyName&quot;&gt;Pauly&lt;/span&gt;, &lt;/span&gt;&lt;span property=&quot;dc:creator&quot;&gt; &lt;span property=&quot;foaf:givenName&quot;&gt;Ray&lt;/span&gt; &lt;span property=&quot;foaf:familyName&quot;&gt;Hilborn&lt;/span&gt;, &lt;/span&gt;&lt;span property=&quot;dc:creator&quot;&gt; &lt;span property=&quot;foaf:givenName&quot;&gt;Trevor A.&lt;/span&gt; &lt;span property=&quot;foaf:familyName&quot;&gt;Branch&lt;/span&gt;, &lt;/span&gt; (&lt;span property=&quot;dc:date&quot;&gt;2013&lt;/span&gt;) &lt;span rel=&quot;http://purl.org/dc/terms/isPartOf&quot; resource=&quot;[http://purl.org/dc/terms/journal]&quot;&gt; &lt;span property=&quot;http://purl.org/dc/terms/title&quot; content=&quot; Nature &quot;&gt; &lt;/span&gt; &lt;span property=&quot;bibo:shortTitle&quot;&gt; Nature &lt;/span&gt; &lt;/span&gt; &lt;span property=&quot;bibo:volume&quot;&gt;494&lt;/span&gt; &lt;a property=&quot;bibo:doi&quot; href=&quot;http://dx.doi.org/10.1038/494303a&quot;&gt;10.1038/494303a&lt;/a&gt;
 &lt;/li&gt;
-&lt;li&gt; 
+&lt;li&gt;
 &lt;span property=&quot;dc:title&quot;&gt;Equivalence of Maxent And Poisson Point Process Models For Species Distribution Modeling in Ecology.&lt;/span&gt; &lt;span property=&quot;dc:creator&quot;&gt; &lt;span property=&quot;foaf:givenName&quot;&gt;Ian W.&lt;/span&gt; &lt;span property=&quot;foaf:familyName&quot;&gt;Renner&lt;/span&gt;, &lt;/span&gt;&lt;span property=&quot;dc:creator&quot;&gt; &lt;span property=&quot;foaf:givenName&quot;&gt;David I.&lt;/span&gt; &lt;span property=&quot;foaf:familyName&quot;&gt;Warton&lt;/span&gt;, &lt;/span&gt; (&lt;span property=&quot;dc:date&quot;&gt;2013&lt;/span&gt;) &lt;span rel=&quot;http://purl.org/dc/terms/isPartOf&quot; resource=&quot;[http://purl.org/dc/terms/journal]&quot;&gt; &lt;span property=&quot;http://purl.org/dc/terms/title&quot; content=&quot; Biometrics &quot;&gt; &lt;/span&gt; &lt;span property=&quot;bibo:shortTitle&quot;&gt; Biometrics &lt;/span&gt; &lt;/span&gt; &lt;a property=&quot;bibo:doi&quot; href=&quot;http://dx.doi.org/10.1111/j.1541-0420.2012.01824.x&quot;&gt;10.1111/j.1541-0420.2012.01824.x&lt;/a&gt;
 &lt;/li&gt;
-&lt;li&gt; 
+&lt;li&gt;
 &lt;span property=&quot;dc:title&quot;&gt;A Simple Method For Dealing With Large State Spaces.&lt;/span&gt; &lt;span property=&quot;dc:creator&quot;&gt; &lt;span property=&quot;foaf:givenName&quot;&gt;Adam W.&lt;/span&gt; &lt;span property=&quot;foaf:familyName&quot;&gt;Schapaugh&lt;/span&gt;, &lt;/span&gt;&lt;span property=&quot;dc:creator&quot;&gt; &lt;span property=&quot;foaf:givenName&quot;&gt;Andrew J.&lt;/span&gt; &lt;span property=&quot;foaf:familyName&quot;&gt;Tyre&lt;/span&gt;, &lt;/span&gt;&lt;span property=&quot;dc:creator&quot;&gt; &lt;span property=&quot;foaf:givenName&quot;&gt;Robert&lt;/span&gt; &lt;span property=&quot;foaf:familyName&quot;&gt;Freckleton&lt;/span&gt;, &lt;/span&gt; (&lt;span property=&quot;dc:date&quot;&gt;2012&lt;/span&gt;) &lt;span rel=&quot;http://purl.org/dc/terms/isPartOf&quot; resource=&quot;[http://purl.org/dc/terms/journal]&quot;&gt; &lt;span property=&quot;http://purl.org/dc/terms/title&quot; content=&quot; Methods in Ecology And Evolution &quot;&gt; &lt;/span&gt; &lt;span property=&quot;bibo:shortTitle&quot;&gt; Methods in Ecology And Evolution &lt;/span&gt; &lt;/span&gt; &lt;span property=&quot;bibo:volume&quot;&gt;3&lt;/span&gt; &lt;a property=&quot;bibo:doi&quot; href=&quot;http://dx.doi.org/10.1111/j.2041-210X.2012.00242.x&quot;&gt;10.1111/j.2041-210X.2012.00242.x&lt;/a&gt;
 &lt;/li&gt;
-&lt;li&gt; 
+&lt;li&gt;
 &lt;span property=&quot;dc:title&quot;&gt;.&lt;/span&gt; &lt;span property=&quot;dc:creator&quot;&gt; &lt;/span&gt; (&lt;span property=&quot;dc:date&quot;&gt;&lt;/span&gt;) &lt;span rel=&quot;http://purl.org/dc/terms/isPartOf&quot; resource=&quot;[http://purl.org/dc/terms/journal]&quot;&gt; &lt;span property=&quot;http://purl.org/dc/terms/title&quot; content=&quot;  &quot;&gt; &lt;/span&gt; &lt;span property=&quot;bibo:shortTitle&quot;&gt; &lt;/span&gt; &lt;/span&gt; &lt;a property=&quot;bibo:doi&quot; href=&quot;http://dx.doi.org/&quot;&gt;&lt;/a&gt;
 &lt;/li&gt;
-&lt;li&gt; 
+&lt;li&gt;
 &lt;span property=&quot;dc:title&quot;&gt;Net Gains.&lt;/span&gt; &lt;span property=&quot;dc:creator&quot;&gt; &lt;span property=&quot;foaf:givenName&quot;&gt;unknown&lt;/span&gt; &lt;span property=&quot;foaf:familyName&quot;&gt;unknown&lt;/span&gt;, &lt;/span&gt; (&lt;span property=&quot;dc:date&quot;&gt;2013&lt;/span&gt;) &lt;span rel=&quot;http://purl.org/dc/terms/isPartOf&quot; resource=&quot;[http://purl.org/dc/terms/journal]&quot;&gt; &lt;span property=&quot;http://purl.org/dc/terms/title&quot; content=&quot; Nature &quot;&gt; &lt;/span&gt; &lt;span property=&quot;bibo:shortTitle&quot;&gt; Nature &lt;/span&gt; &lt;/span&gt; &lt;span property=&quot;bibo:volume&quot;&gt;494&lt;/span&gt; &lt;a property=&quot;bibo:doi&quot; href=&quot;http://dx.doi.org/10.1038/494282a&quot;&gt;10.1038/494282a&lt;/a&gt;
 &lt;/li&gt;
- &lt;/ul&gt;
+&lt;/ul&gt;
 &lt;/div&gt;
 &lt;p&gt;NULL&lt;/p&gt;
 </content>
@@ -8397,22 +7984,19 @@ http://knowledgeblog.org/greycite [Online. last-accessed:
                       bibo: http://purl.org/ontology/bibo/,
                       foaf: http://xmlns.com/foaf/spec/,
                       biro: http://purl.org/spar/biro/&quot; rel=&quot;http://purl.org/spar/biro/ReferenceList&quot;&gt;
-&lt;ul class=&#39;bibliography&#39;&gt; 
-&lt;li&gt; 
+&lt;ul class=&quot;bibliography&quot;&gt;
+&lt;li&gt;
 &lt;span property=&quot;dc:title&quot;&gt;From The Cover: A Double-Integration Hypothesis to Explain Ocean Ecosystem Response to Climate Forcing.&lt;/span&gt; &lt;span property=&quot;dc:creator&quot;&gt; &lt;span property=&quot;foaf:givenName&quot;&gt;E.&lt;/span&gt; &lt;span property=&quot;foaf:familyName&quot;&gt;Di Lorenzo&lt;/span&gt;, &lt;/span&gt;&lt;span property=&quot;dc:creator&quot;&gt; &lt;span property=&quot;foaf:givenName&quot;&gt;M. D.&lt;/span&gt; &lt;span property=&quot;foaf:familyName&quot;&gt;Ohman&lt;/span&gt;, &lt;/span&gt; (&lt;span property=&quot;dc:date&quot;&gt;2013&lt;/span&gt;) &lt;span rel=&quot;http://purl.org/dc/terms/isPartOf&quot; resource=&quot;[http://purl.org/dc/terms/journal]&quot;&gt; &lt;span property=&quot;http://purl.org/dc/terms/title&quot; content=&quot; Proceedings of The National Academy of Sciences &quot;&gt; &lt;/span&gt; &lt;span property=&quot;bibo:shortTitle&quot;&gt; Proceedings of The National Academy of Sciences &lt;/span&gt; &lt;/span&gt; &lt;span property=&quot;bibo:volume&quot;&gt;110&lt;/span&gt; &lt;a property=&quot;bibo:doi&quot; href=&quot;http://dx.doi.org/10.1073/pnas.1218022110&quot;&gt;10.1073/pnas.1218022110&lt;/a&gt;
 &lt;/li&gt;
-&lt;li&gt; 
+&lt;li&gt;
 &lt;span property=&quot;dc:title&quot;&gt;When an Ecological Regime Shift is Really Just Stochastic Noise.&lt;/span&gt; &lt;span property=&quot;dc:creator&quot;&gt; &lt;span property=&quot;foaf:givenName&quot;&gt;S. C.&lt;/span&gt; &lt;span property=&quot;foaf:familyName&quot;&gt;Doney&lt;/span&gt;, &lt;/span&gt;&lt;span property=&quot;dc:creator&quot;&gt; &lt;span property=&quot;foaf:givenName&quot;&gt;S. F.&lt;/span&gt; &lt;span property=&quot;foaf:familyName&quot;&gt;Sailley&lt;/span&gt;, &lt;/span&gt; (&lt;span property=&quot;dc:date&quot;&gt;2013&lt;/span&gt;) &lt;span rel=&quot;http://purl.org/dc/terms/isPartOf&quot; resource=&quot;[http://purl.org/dc/terms/journal]&quot;&gt; &lt;span property=&quot;http://purl.org/dc/terms/title&quot; content=&quot; Proceedings of The National Academy of Sciences &quot;&gt; &lt;/span&gt; &lt;span property=&quot;bibo:shortTitle&quot;&gt; Proceedings of The National Academy of Sciences &lt;/span&gt; &lt;/span&gt; &lt;span property=&quot;bibo:volume&quot;&gt;110&lt;/span&gt; &lt;a property=&quot;bibo:doi&quot; href=&quot;http://dx.doi.org/10.1073/pnas.1222736110&quot;&gt;10.1073/pnas.1222736110&lt;/a&gt;
 &lt;/li&gt;
-
-&lt;li&gt; 
+&lt;li&gt;
 &lt;span property=&quot;dc:title&quot;&gt;Observability of Complex Systems.&lt;/span&gt; &lt;span property=&quot;dc:creator&quot;&gt; &lt;span property=&quot;foaf:givenName&quot;&gt;Y.-Y.&lt;/span&gt; &lt;span property=&quot;foaf:familyName&quot;&gt;Liu&lt;/span&gt;, &lt;/span&gt;&lt;span property=&quot;dc:creator&quot;&gt; &lt;span property=&quot;foaf:givenName&quot;&gt;J.-J.&lt;/span&gt; &lt;span property=&quot;foaf:familyName&quot;&gt;Slotine&lt;/span&gt;, &lt;/span&gt;&lt;span property=&quot;dc:creator&quot;&gt; &lt;span property=&quot;foaf:givenName&quot;&gt;A.-L.&lt;/span&gt; &lt;span property=&quot;foaf:familyName&quot;&gt;Barabasi&lt;/span&gt;, &lt;/span&gt; (&lt;span property=&quot;dc:date&quot;&gt;2013&lt;/span&gt;) &lt;span rel=&quot;http://purl.org/dc/terms/isPartOf&quot; resource=&quot;[http://purl.org/dc/terms/journal]&quot;&gt; &lt;span property=&quot;http://purl.org/dc/terms/title&quot; content=&quot; Proceedings of The National Academy of Sciences &quot;&gt; &lt;/span&gt; &lt;span property=&quot;bibo:shortTitle&quot;&gt; Proceedings of The National Academy of Sciences &lt;/span&gt; &lt;/span&gt; &lt;span property=&quot;bibo:volume&quot;&gt;110&lt;/span&gt; &lt;a property=&quot;bibo:doi&quot; href=&quot;http://dx.doi.org/10.1073/pnas.1215508110&quot;&gt;10.1073/pnas.1215508110&lt;/a&gt;
 &lt;/li&gt;
-
-&lt;li&gt; 
+&lt;li&gt;
 &lt;span property=&quot;dc:title&quot;&gt;Empirical Evidence For North Pacific Regime Shifts in 1977 And 1989.&lt;/span&gt; &lt;span property=&quot;dc:creator&quot;&gt; &lt;span property=&quot;foaf:givenName&quot;&gt;Steven R&lt;/span&gt; &lt;span property=&quot;foaf:familyName&quot;&gt;Hare&lt;/span&gt;, &lt;/span&gt;&lt;span property=&quot;dc:creator&quot;&gt; &lt;span property=&quot;foaf:givenName&quot;&gt;Nathan J&lt;/span&gt; &lt;span property=&quot;foaf:familyName&quot;&gt;Mantua&lt;/span&gt;, &lt;/span&gt; (&lt;span property=&quot;dc:date&quot;&gt;2000&lt;/span&gt;) &lt;span rel=&quot;http://purl.org/dc/terms/isPartOf&quot; resource=&quot;[http://purl.org/dc/terms/journal]&quot;&gt; &lt;span property=&quot;http://purl.org/dc/terms/title&quot; content=&quot; Progress in Oceanography &quot;&gt; &lt;/span&gt; &lt;span property=&quot;bibo:shortTitle&quot;&gt; Progress in Oceanography &lt;/span&gt; &lt;/span&gt; &lt;span property=&quot;bibo:volume&quot;&gt;47&lt;/span&gt; &lt;a property=&quot;bibo:doi&quot; href=&quot;http://dx.doi.org/10.1016/S0079-6611(00)00033-1&quot;&gt;10.1016/S0079-6611(00)00033-1&lt;/a&gt;
 &lt;/li&gt;
-
 &lt;/ul&gt;
 &lt;/div&gt;
 </content>
@@ -8424,27 +8008,35 @@ http://knowledgeblog.org/greycite [Online. last-accessed:
    <updated>2013-02-11T00:00:00+00:00</updated>
    <id>/02/11/ews-review-paper-chat</id>
    <content type="html">&lt;h2 id=&quot;skype-with-alan-and-noam-on-ews&quot;&gt;Skype with Alan and Noam on EWS&lt;/h2&gt;
-&lt;ul&gt;&lt;li&gt; 
+&lt;ul&gt;
+&lt;li&gt;
 &lt;a href=&quot;https://github.com/cboettig/ews-review/issues/11&quot;&gt;Expand section on statistical power and noise (following draft of Alan’s intro)&lt;/a&gt;
-&lt;/li&gt;&lt;li&gt; 
+&lt;/li&gt;
+&lt;li&gt;
 &lt;a href=&quot;https://github.com/cboettig/ews-review/issues/10&quot;&gt;Flush out unfinished sections in main body&lt;/a&gt;
-&lt;/li&gt;&lt;li&gt; 
+&lt;/li&gt;
+&lt;li&gt;
 &lt;a href=&quot;https://github.com/cboettig/ews-review/issues/9&quot;&gt;Write discussion (after intro is done)&lt;/a&gt;
-&lt;/li&gt;&lt;li&gt; 
+&lt;/li&gt;
+&lt;li&gt;
 &lt;a href=&quot;https://github.com/cboettig/ews-review/issues/8&quot;&gt;Discussion with Alan - misc notes&lt;/a&gt;
-&lt;/li&gt;&lt;li&gt; 
+&lt;/li&gt;
+&lt;li&gt;
 &lt;a href=&quot;https://github.com/cboettig/ews-review/issues/7&quot;&gt;edit introduction&lt;/a&gt;
-&lt;/li&gt;&lt;li&gt; 
+&lt;/li&gt;
+&lt;li&gt;
 &lt;a href=&quot;https://github.com/cboettig/ews-review/issues/6&quot;&gt;Schreiber figure&lt;/a&gt;
-&lt;/li&gt;&lt;li&gt; 
+&lt;/li&gt;
+&lt;li&gt;
 &lt;a href=&quot;https://github.com/cboettig/ews-review/issues/5&quot;&gt;Kefi figure&lt;/a&gt;
-&lt;/li&gt;&lt;li&gt; 
+&lt;/li&gt;
+&lt;li&gt;
 &lt;a href=&quot;https://github.com/cboettig/ews-review/issues/4&quot;&gt;Venn Diagram figure should have numbers corresponding to the references that examine each area&lt;/a&gt;
-&lt;/li&gt;&lt;li&gt; 
+&lt;/li&gt;
+&lt;li&gt;
 &lt;a href=&quot;https://github.com/cboettig/ews-review/issues/3&quot;&gt;Finalize edits before sending for internal review&lt;/a&gt;
-&lt;/li&gt;&lt;/ul&gt;
-
-
+&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h2 id=&quot;other&quot;&gt;Other&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;Some &lt;a href=&quot;https://github.com/cboettig/knitcitations/commits?author=cboettig&quot;&gt;updates to knitcitations&lt;/a&gt; addressing special cases.&lt;br /&gt;&lt;/li&gt;

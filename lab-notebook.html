@@ -140,7 +140,7 @@
 <p><span class="math">\[ B^2 (T-1) \left( \left(\theta - \frac{\sum_t A_t}{B(T-1)}\right)^2 + \frac{\sum A_t ^2 - (\sum A_t)^2}{B^2 (T-1)} \right) \]</span></p>
 <p>Which lets us write <span class="math">\(P(\theta | X; \alpha, \sigma)\)</span> as a normal distribution in <span class="math">\(\theta\)</span> times some constant terms:</p>
 <p><span class="math">\[ P(\theta | X; \alpha, \sigma) =  \exp \left(\frac{-\sum A_t^2 + (\sum A_t)^2 }{V_{\tau}  }\right) \sqrt{\frac{1}{2\pi V_{\tau} }}^{T-1} \int d\theta\exp\left( -\frac{ \left(\theta -  \frac{\sum_t A_t}{B(T-1)} \right)^2 }{\tfrac{2V_{\tau}}{B^2 (T-1)}}\right) \]</span></p>
-<p>In which we recognize the integral as Gaussian with mean <span class="math">\(\mu = \frac{\sum_t A_t}{B(T-1)} \)</span> and variance <span class="math">\(\nu =  V_{\tau}/(B^2(T-1))\)</span>, and thus can replace the integral with <span class="math">\(\sqrt{2 \pi \nu} = \sqrt{\frac{2 \pi V_{\tau} }{B^2(T-1)}}\)</span>,</p>
+<p>In which we recognize the integral as Gaussian with mean $=  $ and variance <span class="math">\(\nu = V_{\tau}/(B^2(T-1))\)</span>, and thus can replace the integral with <span class="math">\(\sqrt{2 \pi \nu} = \sqrt{\frac{2 \pi V_{\tau} }{B^2(T-1)}}\)</span>,</p>
 <p><span class="math">\[ P(\theta | X; \alpha, \sigma) =  \exp \left(\frac{-\sum A_t^2 + (\sum A_t)^2 }{V_{\tau}  }\right) \sqrt{\frac{1}{2\pi V_{\tau} }}^{T-1}  \sqrt{\frac{2 \pi V_{\tau} }{B^2(T-1)}}\]</span></p>
 <p>Collecting common terms in <span class="math">\(V_t\)</span>,</p>
 <p><span class="math">\[ P(\theta | X; \alpha, \sigma) =  \exp \left(\frac{f(A_t)}{V_{\tau}}\right) \sqrt{\frac{1}{2\pi}}^{T-1}  \sqrt{\frac{2 \pi  }{B^2(T-1)}} V_{\tau}^{\tfrac{1}{2}} V_{\tau}^{\tfrac{1-T}{2}}  \]</span></p>
@@ -184,9 +184,7 @@ leaving us with
 $$\frac{1}{(T-1)\sqrt{2 \pi}^{T-2} } \frac{\tfrac{1}{2}^{T/2} \left( \sum M_t^2 - \frac{ \left( \sum M_t \right)^2}{T - 1}\right)^{T/2}}{\Gamma(T/2)} $$
 
 
---> 
-
-
+-->
  
 <!-- not that raw_content depends on custom generator, 
      see _plugins/jekyll-labnotebook-plugins/raw_content --> 
@@ -399,8 +397,7 @@ meta &lt;-<span class="st"> </span><span class="kw">get_metadata</span>(birds) <
 <p>His list of problems to be tackled by this Data Science Initiative includes some particularly catching references to issues that have raised themselves on Dynamic Ecology before:</p>
 <!--
 > - An incentive structure that favors individualism, hyper-specialization and "novelty" to a toxic extreme
---> 
-
+-->
 <blockquote>
 <ul>
 <li>people grab methods like shirts from a rack, to see if they work with the pants they are wearing that day</li>
@@ -424,7 +421,6 @@ meta &lt;-<span class="st"> </span><span class="kw">get_metadata</span>(birds) <
 Data scales in a way that publications do not, even (or rather, especially) within a particular sub-domain.  Given a single paper on a topic, it is much easier to read the conclusion than replicate it from the data.  Given 1000 papers on the topic vs having the underlying data in a standardized form, it becomes easier to replicate the analyses. Surely that would just lead to nonsense, given the idiosyncrasies of each different experiment that were never meant to be compared in that way?  Surely only by carefully reading not only each paper, but each supplement, can we really understand what was done well enough to replicate or re-analyze it?  Yet we cite papers as if they have demonstrated something in far more generality than all that.   
 
 -->
-
 <h5 id="the-problem-part-2-junk-software">the problem, part 2: junk software</h5>
 <p>As Perez is careful to point out, those implementing and publishing methods aren’t helping either. Unreliable, inextensible and opaque computational implementations act both as barriers to adoption and validation. Trouble with scientific software has been well recognized by the literature (e.g. <a href="http://doi.org/10.1038/467775a">Merali (2010), <em>Nature</em></a>, <a href="http://doi.org/10.1038/nature10836">Inces et al. (2012), <em>Nature</em></a>), the news (<a href="http://www.timeshighereducation.co.uk/news/save-your-work-give-software-engineers-a-career-track/2006431.article">Times Higher Education</a>) and funding agencies (<a href="http://www.nsf.gov/pubs/2013/nsf13525/nsf13525.htm">National Science Foundation</a>). While it is difficult to assess the frequency of software bugs that may really alter the results (though see Inces et al.), designs that will make software challenging or impossible to maintain, scale to larger tasks or extend as methods evolve are more readily apparent. Cultural challenges around software run as deep as they do around data. When Mozilla’s Science Lab <a href="http://doi.org/10.1038/501472a">undertook a review of code</a> associated with scientific publications, they took some criticism from other <a href="http://simplystatistics.org/2013/09/26/how-could-code-review-discourage-code-disclosure-reviewers-with-motivation/">advocates</a> of publishing code. I encountered this first hand in replies from authors, editors and reviewers on my own blog post <a href="http://carlboettiger.info/2013/06/13/what-I-look-for-in-software-papers.html">suggesting we raise the bar</a> on the review of methodological implementations. Despite disagreement about where that bar should be, I think we all felt the community could benefit from clearer guidance or consensus on how to review papers in which the software implementation plays an essential part and contribution.</p>
 <h5 id="the-solution-part-2-software-publication">the solution, part 2: software publication?</h5>
@@ -432,8 +428,6 @@ Data scales in a way that publications do not, even (or rather, especially) with
 <h6 id="or-not">Or not?</h6>
 <p>While widespread recognition of its importance will no doubt help bring us faster software, fewer bugs and more user-friendly interfaces, it may do more harm than good. Promotion of software as a product can lead to empire-building, for which ESRI’s ArcGIS might be a poster child. The scientific concepts become increasingly opaque, while training in a conceptually rich academic field gives way to more mindless training in the user interface of a single giant software tool. I believe that good scientific software should be modular – small code bases that can be easily understood, inter-operable, and perform a single task well (the Unix model). This lets us build more robust computational infrastructure tailored to the problem at hand, just as individual Lego bricks may be assembled and reassembled. Unfortunately, I do not see how recognition for software products would promote small modules over vast software platforms, or interoperability with other software instead of an exclusive walled garden.</p>
 <!-- include image of lego brick tower?-->
-
-
 <h4 id="so-change-incentives-how">So, change incentives <em>how</em>?</h4>
 <p>If this provides some argument as to why one might want to change incentives around data and software publication, I have said nothing to suggest how. After all, as ecologists we’re trained to reflect on the impact a policy would have, not advocate for what should be done about it. If the decision-makers agree about the effects of the given incentives, then choosing what to reward should be easier.</p>
 <!--
@@ -442,8 +436,6 @@ Data scales in a way that publications do not, even (or rather, especially) with
 In raising these questions, Perez brings the role of a Data Science Institute down from the clouds of superficial pattern-finding in astronomically large data sets that bear no resemblance to what most of us work on, and places front and center the challenges of designing, selecting, implementing and interpreting the richer statistical analyses we face each day. In the process of bolstering the data and methodology upon which we base research today, we may open up the doors to better, faster, and bigger science tomorrow.  
 
 -->
-
-
 <section class="footnotes">
 <hr />
 <ol>
@@ -561,8 +553,6 @@ Open data is often represented as benefiting the parasites (through "free" publi
 Phylogenetic data is perhaps the most pervasive example across ecological and evolutionary work where people now use sequences or phylogeny data they did not collect themselves.  And yes, the literature is rife with examples where this data has been misapplied - such as branch lengths being misinterpreted or uncertainty in branch lengths ignored.  Would fewer errors be made if we had no genbank and everyone had to collect all their own sequence data?  Yes, because most of these studies would become infeasible anyhow.  Creating a time-calibrated phylogeny from sequence data and fossils you collected all yourself might give you a greater appreciation for the uncertainty, but only to the extent that you learn the theoretical statistical underpinnings of the inference along the way.  
 
 -->
-
-
  
 <!-- not that raw_content depends on custom generator, 
      see _plugins/jekyll-labnotebook-plugins/raw_content --> 

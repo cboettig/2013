@@ -127,7 +127,7 @@
 <p><span class="math">\[ B^2 (T-1) \left( \left(\theta - \frac{\sum_t A_t}{B(T-1)}\right)^2 + \frac{\sum A_t ^2 - (\sum A_t)^2}{B^2 (T-1)} \right) \]</span></p>
 <p>Which lets us write <span class="math">\(P(\theta | X; \alpha, \sigma)\)</span> as a normal distribution in <span class="math">\(\theta\)</span> times some constant terms:</p>
 <p><span class="math">\[ P(\theta | X; \alpha, \sigma) =  \exp \left(\frac{-\sum A_t^2 + (\sum A_t)^2 }{V_{\tau}  }\right) \sqrt{\frac{1}{2\pi V_{\tau} }}^{T-1} \int d\theta\exp\left( -\frac{ \left(\theta -  \frac{\sum_t A_t}{B(T-1)} \right)^2 }{\tfrac{2V_{\tau}}{B^2 (T-1)}}\right) \]</span></p>
-<p>In which we recognize the integral as Gaussian with mean <span class="math">\(\mu = \frac{\sum_t A_t}{B(T-1)} \)</span> and variance <span class="math">\(\nu =  V_{\tau}/(B^2(T-1))\)</span>, and thus can replace the integral with <span class="math">\(\sqrt{2 \pi \nu} = \sqrt{\frac{2 \pi V_{\tau} }{B^2(T-1)}}\)</span>,</p>
+<p>In which we recognize the integral as Gaussian with mean $=  $ and variance <span class="math">\(\nu = V_{\tau}/(B^2(T-1))\)</span>, and thus can replace the integral with <span class="math">\(\sqrt{2 \pi \nu} = \sqrt{\frac{2 \pi V_{\tau} }{B^2(T-1)}}\)</span>,</p>
 <p><span class="math">\[ P(\theta | X; \alpha, \sigma) =  \exp \left(\frac{-\sum A_t^2 + (\sum A_t)^2 }{V_{\tau}  }\right) \sqrt{\frac{1}{2\pi V_{\tau} }}^{T-1}  \sqrt{\frac{2 \pi V_{\tau} }{B^2(T-1)}}\]</span></p>
 <p>Collecting common terms in <span class="math">\(V_t\)</span>,</p>
 <p><span class="math">\[ P(\theta | X; \alpha, \sigma) =  \exp \left(\frac{f(A_t)}{V_{\tau}}\right) \sqrt{\frac{1}{2\pi}}^{T-1}  \sqrt{\frac{2 \pi  }{B^2(T-1)}} V_{\tau}^{\tfrac{1}{2}} V_{\tau}^{\tfrac{1-T}{2}}  \]</span></p>
@@ -171,9 +171,7 @@ leaving us with
 $$\frac{1}{(T-1)\sqrt{2 \pi}^{T-2} } \frac{\tfrac{1}{2}^{T/2} \left( \sum M_t^2 - \frac{ \left( \sum M_t \right)^2}{T - 1}\right)^{T/2}}{\Gamma(T/2)} $$
 
 
---> 
-
-
+-->
 
     </article>
   </div>

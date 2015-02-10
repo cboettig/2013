@@ -109,7 +109,7 @@
     <h3 id="authenticating-via-dataone-api">Authenticating via DataOne API</h3>
 <p>Matt Jones provides a nice <code>dataone</code> package to handle accessing and posting data to DataOne nodes such as the KNB from R. Uploading files through the API requires authentication, which in turn requires a certificate from CILogin. As this process proved a bit tricky to me, I add some documentation here. I am using a Ubuntu (13.04) system, so the procedure might differ slightly for other systems.</p>
 <ol type="1">
-<li><p>Go to <a href="https://cilogon.org/?skin=DataONE">https://cilogon.org/?skin=DataONE</a></p></li>
+<li><p>Go to <a href="https://cilogon.org/?skin=DataONE" class="uri">https://cilogon.org/?skin=DataONE</a></p></li>
 <li><p>Select authentication credentials. I used Google as an OpenID provider.</p></li>
 <li><p>This asked me to download a file named <code>shibCILaunchGSCA.jnlp</code>. This is a java webstart application and is suppsed to launch in the browser; a feature many operating systems apparently disabled due to security concerns. One could reconfigure the browser settings to execute this file type (using javaws), or simply download and run javaws manually in the command line:</p></li>
 </ol>

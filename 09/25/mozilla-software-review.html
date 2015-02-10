@@ -116,25 +116,23 @@
 <p>We need to get more code out there, not improve how it looks</p>
 </blockquote>
 <p>(Erika provides a bit more context to Roger’s comments below).</p>
-<blockquote class="twitter-tweet"><p>
+<blockquote class="twitter-tweet">
+<p>
 <a href="https://twitter.com/ctitusbrown"><span class="citation" data-cites="ctitusbrown">@ctitusbrown</span></a> <a href="https://twitter.com/cboettig"><span class="citation" data-cites="cboettig">@cboettig</span></a> <a href="https://twitter.com/kaythaney"><span class="citation" data-cites="kaythaney">@kaythaney</span></a> <a href="https://twitter.com/nickbarnes"><span class="citation" data-cites="nickbarnes">@nickbarnes</span></a> see whole <a href="https://twitter.com/simplystats"><span class="citation" data-cites="simplystats">@simplystats</span></a> quote on prof. code review discouraging sharing <a href="http://t.co/pNQWT9Safz">pic.twitter.com/pNQWT9Safz</a>
 </p>
 — Erika Check Hayden (<span class="citation" data-cites="Erika_Check">@Erika_Check</span>) <a href="https://twitter.com/Erika_Check/statuses/382911015358181376">September 25, 2013</a>
 </blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-
 <p>The <em>Nature</em> News piece thus nails a central tension in the community between promoting higher standards for code (A position exemplified in an earlier <em>Nature</em> column titled <a href="http://doi.org/10.1038/467775a" title="Merali 2010, Nature">“Computational Science … Error: Why scientific programming does not compute”</a>, and more recently in <em>Science</em> by <a href="http://doi.org/10.1126/science.1231535" title="Joppa et al. 2013, &#39;Troubling Trends in Scientific Software Use&#39;">Joppa <em>et al.</em> 2013</a>, which explicitly calls for peer review of scientific software) vs promoting more widespread sharing of software (as exemplified by Nick Barnes piece in the same issue, <a href="http://doi.org/10.1038/467753a" title="Barnes 2010, Nature">“Publish your computer code: it is good enough”</a>.</p>
 <p>The arguments made in each of the perspectives are excellent, and should be required reading for anyone interested in the subject. In addition to the shorter comment by Barnes, I also recommend the more recent <em>Nature</em> perspective, <a href="http://doi.org/10.1038/nature10836" title="Ince et al. 2012, Nature">The Case for Open Computer Programs</a>, which lays out the argument and modest practical recommendations (that have largely been ignored as far as I can tell) just brilliantly. In particular, I think they nail the issue of why describing the algorithm or providing pseudo-code is not a satisfactory description of the method.</p>
 <p>However, I also think the tension between review and sharing is somewhat artificial. While each of these positions emphasizes the need to share source-code, the call for code review by Merali, Joppa et al (or in my own blog post mentioned earlier), focus on <em>scientific software</em> aimed at reuse by others. The concerns voiced in Roger Peng’s comments and echoed by Nick Barnes focus on another class of code entirely – code associated with a particular research publication that would primarily serve only to document and support those results, rather than be readily adapted to other uses.</p>
-<blockquote class="twitter-tweet"><p>
+<blockquote class="twitter-tweet">
+<p>
 <a href="https://twitter.com/cboettig"><span class="citation" data-cites="cboettig">@cboettig</span></a> <a href="https://twitter.com/ctitusbrown"><span class="citation" data-cites="ctitusbrown">@ctitusbrown</span></a> <a href="https://twitter.com/kaythaney"><span class="citation" data-cites="kaythaney">@kaythaney</span></a> but far more important to get code out than to get it “right”, IYSWIM.
 </p>
 — Nick Barnes (<span class="citation" data-cites="nickbarnes">@nickbarnes</span>) <a href="https://twitter.com/nickbarnes/statuses/382746748135174144">September 25, 2013</a>
 </blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-
-
-
 <h3 id="classes-of-code-snippets-vs-software">Classes of Code: Snippets vs Software</h3>
 <p>For me, the crux of these concerns lies in the difference between “software papers”<a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a> and papers which merely use code in some element of the methodology. The Mozilla study focused exclusively on code appearing in the full-text of publications in PLoS Computational Biology. Though I am pleased to see the Science Lab tackle the issue of software review and bring the expertise of their professional software developers to bear on scientific code, this is perhaps not the kind of code I would have chosen to focus on (something I shared with the team early on in seeing the announcement).</p>
 <p>Without knowing which papers are included it is of course difficult to say to much. But knowing that the code appears in the full text of the papers themselves, we can assume that it is not a complete software package intended for reuse by other researchers. Using code within the body of a manuscript implies the intent to communicate methodology more concisely and precisely than might be done in prose; in much the same manner that we use equations in place of prose. This is an important development in scientific communication, but is also rather distinct from the use of code in other contexts, in which the code itself is meant to be read primarily by machines. It is code that is already intended to help <em>explain</em>.</p>
@@ -146,44 +144,42 @@
 <blockquote>
 <p>“We need to get more code out there, not improve how it looks.”</p>
 </blockquote>
-<blockquote class="twitter-tweet"><p>
+<blockquote class="twitter-tweet">
+<p>
 <a href="https://twitter.com/kaythaney"><span class="citation" data-cites="kaythaney">@kaythaney</span></a> <a href="https://twitter.com/ctitusbrown"><span class="citation" data-cites="ctitusbrown">@ctitusbrown</span></a> yup, ‘pretty’ is dismissive terminology, though possibly short-hand for ‘human-readable’ not just ‘machine-readable’
 </p>
 — Carl Boettiger (<span class="citation" data-cites="cboettig">@cboettig</span>) <a href="https://twitter.com/cboettig/statuses/382905327013728256">September 25, 2013</a>
 </blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-
 <p>Most modern languages include <a href="http://en.wikipedia.org/wiki/Syntactic_sugar">syntactic sugar</a>: ways of expressing commands that are more easily interpretable to human readers. For instance, in C, <code>a[i]</code> is syntactic sugar for <code>*(a+i)</code>. Higher-level languages are in some ways all sugar around existing lower-level libraries.<a href="#fn2" class="footnoteRef" id="fnref2"><sup>2</sup></a> Like good mathematical notation or good prose, this is not just about being ‘pretty’, but being more effective in communicating with humans. Certainly this is something we can improve upon as researchers, but it is perhaps not the best starting point.</p>
 <h3 id="share-first-fix-later">Share first, fix later</h3>
 <p>If code review should apply to all levels of code or be reserved for scientific software may still be an open question. What we should be able to agree on is in the publishing of code in the first place:</p>
-<blockquote class="twitter-tweet"><p>
+<blockquote class="twitter-tweet">
+<p>
 <a href="https://twitter.com/cboettig"><span class="citation" data-cites="cboettig">@cboettig</span></a> <a href="https://twitter.com/kaythaney"><span class="citation" data-cites="kaythaney">@kaythaney</span></a> <a href="https://twitter.com/nickbarnes"><span class="citation" data-cites="nickbarnes">@nickbarnes</span></a> I think code sharing should be mandatory <em>shrug</em>. It's part of the methods. I reject papers w/o it.
 </p>
 — Titus Brown (<span class="citation" data-cites="ctitusbrown">@ctitusbrown</span>) <a href="https://twitter.com/ctitusbrown/statuses/382903924253929472">September 25, 2013</a>
 </blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-
-
 <p>It continues to surprise me how few journals require code deposition. <em>Science</em> explicitly <a href="http://doi.org/10.1126/science.1203354">adopted a new policy in 2011</a> stating</p>
 <blockquote>
 <p><em>Science</em> is extending our data access requirement listed above to include computer codes involved in the creation or analysis of data</p>
 </blockquote>
 <p>which asks that the data be placed in a appropriate permanent repository or otherwise placed in the supplementary materials (see <a href="http://www.sciencemag.org/site/feature/contribinfo/prep/gen_info.xhtml#dataavail">information for authors</a>).</p>
 <p>Yet I have not seen code provided for any analysis I have read in Science since 2011. Either we have a very different understanding of what it means to use computer codes in the analysis of data or <em>Science</em> grossly neglects its own policy.<a href="#fn3" class="footnoteRef" id="fnref3"><sup>3</sup></a> Not to pick on them of course, few other journals have explicitly adopted such a policy.</p>
-<blockquote class="twitter-tweet"><p>
+<blockquote class="twitter-tweet">
+<p>
 .<a href="https://twitter.com/cboettig"><span class="citation" data-cites="cboettig">@cboettig</span></a> <a href="https://twitter.com/kaythaney"><span class="citation" data-cites="kaythaney">@kaythaney</span></a> <a href="https://twitter.com/nickbarnes"><span class="citation" data-cites="nickbarnes">@nickbarnes</span></a> As one of my grad students said to me, “I don't understand why ‘must share code’ is a radical opinion.”
 </p>
 — Titus Brown (<span class="citation" data-cites="ctitusbrown">@ctitusbrown</span>) <a href="https://twitter.com/ctitusbrown/statuses/382904483102982145">September 25, 2013</a>
 </blockquote>
-
-
 <p>Nick Barnes suggests that this alone may be enough to improve code quality:</p>
-<blockquote class="twitter-tweet"><p>
+<blockquote class="twitter-tweet">
+<p>
 <a href="https://twitter.com/cboettig"><span class="citation" data-cites="cboettig">@cboettig</span></a> <a href="https://twitter.com/ctitusbrown"><span class="citation" data-cites="ctitusbrown">@ctitusbrown</span></a> <a href="https://twitter.com/kaythaney"><span class="citation" data-cites="kaythaney">@kaythaney</span></a> require sharing. Pride will then rapidly lead to review and other improvement techniques.
 </p>
 — Nick Barnes (<span class="citation" data-cites="nickbarnes">@nickbarnes</span>) <a href="https://twitter.com/nickbarnes/statuses/382755320143282176">September 25, 2013</a>
 </blockquote>
-
 <p>Certainly it will help, though not enough if the state of open source scientific software is any indication (Nick does acknowledge a rather geological notion of ‘rapid’). Smaller codes used in particular analyses will certainly feel this pressure more, as they will be easier to scrutinize.</p>
 <h3 id="so-what-might-we-learn-from-the-mozilla-code-review">So what might we learn from the Mozilla Code review?</h3>
 <p>Focusing on code appearing in-line in papers certainly addresses a different beast than large scientific software packages intended for reuse. As Roger observed, we will likely learn that scientists aren’t software engineers. We may learn how to use code to communicate more effectively. We may learn some lessons that apply for larger codebases involved in scientific software, but I think there the problem are often outside of the individual lines of code themselves and arise from other development practices.</p>

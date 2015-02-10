@@ -152,9 +152,9 @@
 <h3 id="rcurl-query-from-scott">RCurl query from Scott</h3>
 <p>Translate a cURL command’s <code>-d</code> flag to RCurl, e.g.</p>
 <pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">curl</span> -H <span class="st">&quot;X-Gauges-Token: &lt;token&gt;&quot;</span> \
-     <span class="kw">-d</span> <span class="st">&quot;title=Example&quot;</span> \
-     <span class="kw">-d</span> <span class="st">&quot;tz=Eastern Time (US %26 Canada)&quot;</span> \
-     <span class="kw">https</span>://secure.gaug.es/gauges</code></pre>
+     -d <span class="st">&quot;title=Example&quot;</span> \
+     -d <span class="st">&quot;tz=Eastern Time (US %26 Canada)&quot;</span> \
+     https://secure.gaug.es/gauges</code></pre>
 <p>I proposed</p>
 <pre class="sourceCode r"><code class="sourceCode r"><span class="kw">httpPOST</span>(<span class="st">&quot;https://secure.gaug.es/gauges&quot;</span>, 
          <span class="dt">postfields=</span><span class="st">&quot;title=Example&amp;tz=Eastern Time (US %26 Canada)&quot;</span>, 

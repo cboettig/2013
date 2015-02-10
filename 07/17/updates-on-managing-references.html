@@ -116,9 +116,12 @@
 <p>Make a copy of the database first</p>
 <pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">cp</span> ~/.local/share/data/Mendeley Ltd./Mendeley Desktop/cboettig@gmail.com@www.mendeley.com.sqlite tmp.sqlite</code></pre>
 <p>Then in R, read in the database and show available tables (see <a href="http://sandymuspratt.blogspot.com/2012/11/r-and-sqlite-part-1.html">example tutorial</a>):</p>
-<p><code>{r} library('sqldf') db &lt;- dbConnect(SQLite(), dbname=&quot;tmp.sqlite&quot;) dbListTables(db)</code></p>
+<pre class="{r}"><code>library(&#39;sqldf&#39;)
+db &lt;- dbConnect(SQLite(), dbname=&quot;tmp.sqlite&quot;)
+dbListTables(db)</code></pre>
 <p>Most metadata for all documents in the library appears in table <code>Documents</code>. <code>dbListFields</code> shows the column headers, though alternatively we can just read this information into an R <code>data.frame</code> (This makes sense for reasonable size databases; for large databases we will want to query the data via SQL commands directly rather than attempting to load it all into memory).</p>
-<p><code>{r} dbListFields(db, &quot;Documents&quot;) documents &lt;- dbReadTable(db, &quot;Documents&quot;)</code></p>
+<pre class="{r}"><code>dbListFields(db, &quot;Documents&quot;)
+documents &lt;- dbReadTable(db, &quot;Documents&quot;)</code></pre>
 <p>Several useful fields are not included in this data frame. In particular, Author, Tag, Folder and Keywords. Some extra leg-work is needed to add this data. For instance <code>DocumentFolders</code> gives us the map of each article <code>id</code> to a folder <code>id</code>, and then <code>Folders</code> gives the details of that Folder.</p>
 <p>Using the <code>data.table</code> package, indexing by <code>id</code>, and using join methods would probably be the most efficient way to do this. (example may follow when I get the chance).</p>
 
